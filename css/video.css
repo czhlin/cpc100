@@ -1,0 +1,251 @@
+.myVideo-div {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	background: url(../img/dh.png) no-repeat 0 100%,red;
+}
+.myVideo-body {
+	position: absolute;
+	width: 80%;
+	height: 600px;
+	top: 50%;
+	left: 50%;
+	border-radius: 10px;
+	transform: translate(-50%,-50%);
+	background: left top linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,1));
+	-webkit-box-shadow: 18px 21px 4px 1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 18px 21px 4px 1px rgba(0,0,0,0.75);
+	box-shadow: 18px 21px 4px 1px rgba(0,0,0,0.75);
+}
+.myVideo-body .videoBox {
+	box-sizing: border-box;
+	position: relative;
+	padding: 20px;
+	width: 100%;
+	margin: 0 auto;
+	height: 500px;
+	overflow: hidden;
+}
+.videoBox video {
+	width: 100%;
+	height: 100%;
+}
+.myVideo-body .videoBar {
+	width: 100%;
+	height: 50px;
+	background: left top linear-gradient(rgba(255,255,255,0.4),rgba(50,40,43,0.1));
+	overflow: hidden;
+}
+.videoBar .bar {
+	position: relative;
+	box-sizing: border-box;
+	float: left;
+	margin: 0;
+	width: 80%;
+	height: 100%;
+	padding-left: 20px;
+} 
+.videoBar .tiemBox {
+	float: left;
+	width: 20%;
+	height: 100%;
+	color: white;
+	text-align: center;
+	line-height: 50px;
+	/* background-color: green; */
+}
+.videoBar .bar input[type="range"] {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	transform: translateY(-50%);
+}
+.myVideo-body .myVideo-controls {
+	background-color: #c5708b;
+	width: 100%;
+	height: 50px;
+	border-radius: 0 0 10px 10px;
+	text-align: center;
+	line-height: 50px;
+}
+.myVideo-body .myVideo-controls div {
+	display: inline-block;
+}
+.myVideo-controls .video-volume {
+	position: relative;
+}
+.video-list {
+	position: relative;
+}
+.video-list:hover .videoListBox {
+	visibility: visible;
+}
+.video-list .videoListBox {
+	position: absolute;
+	visibility: hidden;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%) translateY(-60px);
+}
+.video-volume .volumeBox {
+	position: absolute;
+	bottom: 100%;
+	left: 10px;
+	transform: translateX(-50%);
+	visibility: hidden;
+}
+.video-volume:hover .volumeBox {
+	visibility: visible;
+}
+/* 视频列表 */
+.selectBox {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-52%,-50%);
+	background: transparent;
+	overflow: hidden;
+}
+.videoListBox {
+	width: 500px;
+	height: 500px;
+}
+#videoList {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform: translateX(20px);
+	appearance:none; 
+	padding: 20px;
+	border: 0;
+	outline: 0;
+	text-align: center;
+	background: transparent;
+}
+#videoList option {
+	position: relative;
+	font-family: kaiTi;
+	font-weight: 500;
+	font-size: 20px;
+	color: black;
+	margin: 20px auto;
+	overflow: hidden;
+}
+.selectBox #videoList option:checked::after {
+	position: absolute;
+	left: 50%;
+	content: attr(value);
+	width: 100%;
+	height: 100%;
+	transform: translateX(-50%);
+	background-color: #e6d2d5;
+	text-align: center;
+	color: red;
+}  
+/* 进度条 */
+.myRange {
+	-webkit-appearance: none;
+	width: 10px;
+	display: inline-block;
+	position: relative;
+	background: -webkit-linear-gradient(#61bd12, #ddd) no-repeat,#ddd ;
+	padding: 0;
+	margin:0;
+	background-size: 100% 100%;/*设置左右宽度比例*/
+	border-radius: 10px; /*这个属性设置使填充进度条时的图形为圆角*/
+}
+input[type=range].myRange::-webkit-slider-thumb {
+   -webkit-appearance: none;
+	height: 25px;
+	width: 25px;
+	margin-top: -5px; /*使滑块超出轨道部分的偏移量相等*/
+	background: #ffffff;
+	border-radius: 50%; /*外观设置为圆形*/
+	border: solid 0.125em rgba(205, 224, 230, 0.5); /*设置边框*/
+	box-shadow: 0 .125em .125em #3b4547; /*添加底部阴影*/
+}
+input[type=range].myRange::-webkit-slider-runnable-track{
+	height: 15px;
+	border-radius: 10px;
+	 box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112; /*轨道内置阴影效果*/
+}
+input[type=range].myRange:focus{
+	outline: none;
+}
+input[type=range].myRange::-moz-range-track {
+	height: 15px;
+	border-radius: 10px; /*将轨道设为圆角的*/
+	box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112; /*轨道内置阴影效果*/
+}
+
+input[type=range].myRange::-moz-range-thumb {
+	appearance: none;
+	height: 18px;
+	width: 18px;
+	margin-top: -5px; /*使滑块超出轨道部分的偏移量相等*/
+	background: #ffffff; 
+	border-radius: 50%; /*外观设置为圆形*/
+	border: solid 0.125em rgba(205, 224, 230, 0.5); /*设置边框*/
+	box-shadow: 0 .125em .125em #3b4547; /*添加底部阴影*/
+}
+
+input[type=range].myRange::-moz-range-progress {
+	background: linear-gradient(#059CFA, #059CFA) no-repeat;
+	height: 13px;	 
+	border-radius: 10px;
+}
+
+input[type=range].myRange::-ms-track {
+	height: 18px;
+	border-radius: 10px;
+	box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112;
+	border-color: transparent; /*去除原有边框*/
+	color: transparent; /*去除轨道内的竖线*/
+}
+
+input[type=range].myRange::-ms-thumb {
+	border: solid 0.125em rgba(205, 224, 230, 0.5);
+	height: 18px;
+	width: 18px;
+	border-radius: 50%;
+	background: #ffffff;
+	margin-top: -5px;
+	box-shadow: 0 .125em .125em #3b4547;
+}
+
+input[type=range].myRange::-ms-fill-lower {
+	/*进度条已填充的部分*/
+	height: 15px;
+	border-radius: 10px;
+	background: #61bd12;
+}
+
+input[type=range].myRange::-ms-fill-upper {
+	/*进度条未填充的部分*/
+	height: 15px;
+	border-radius: 10px;
+	background: #ffffff;
+}
+
+input[type=range].myRange:focus::-ms-fill-lower {
+	background: #61bd12;
+}
+
+input[type=range].myRange:focus::-ms-fill-upper {
+	background: #ffffff;
+}
+.video-volume .volumeBox {
+	width: 200px;
+	height: 50px;
+}
+.video-volume .volume-range {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	position: absolute;
+	width: 90%;
+	background-size: 100% 100%;/*设置左右宽度比例*/
+	background: -webkit-linear-gradient(red, #ddd) no-repeat,#ddd ;
+}

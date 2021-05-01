@@ -1,0 +1,583 @@
+.music-body {
+	width: 100%;
+	margin: 50px auto;
+	background:linear-gradient(to right top,rgba(0,0,0,0.3),rgba(0,0,0,0.5));
+	background-size: 100%;
+	background-position: right top;
+	border-radius: 20px;
+	-webkit-box-shadow: 18px 21px 4px 1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 18px 21px 4px 1px rgba(0,0,0,0.75);
+	box-shadow: 18px 21px 4px 1px rgba(0,0,0,0.75);
+}
+.music-div {
+	width: 100%;
+	background:url(../img/gq.jpg) no-repeat,#7c1823;
+}
+.music-show {
+	width: 100%;
+	overflow: hidden;
+}
+.music-img {
+	float: left;
+	position: relative;
+	width: 50%;
+	height: 300px;
+}
+.music-img .imgBox {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 200px;
+	height: 200px;
+	margin-left: -100px;
+	margin-top: -100px;
+}
+.imgBox img {
+	border-radius: 50%;
+	width: 100%;
+	height: 100%;
+}
+#pointer {
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	margin-left: -100px;
+	width: 200px;
+	z-index: 1;
+}
+.selectBox {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-52%,-50%);
+	background: transparent;
+	overflow: hidden;
+}
+#list {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform: translateX(20px);
+	appearance:none; 
+	padding: 20px;
+	border: 0;
+	outline: 0;
+	text-align: center;
+	background: transparent;
+}
+#list option {
+	position: relative;
+	font-family: kaiTi;
+	font-weight: 500;
+	font-size: 20px;
+	color: black;
+	margin: 20px auto;
+	overflow: hidden;
+}
+.selectBox #list option:checked::after {
+	position: absolute;
+	left: 50%;
+	content: attr(value);
+	width: 100%;
+	height: 100%;
+	transform: translateX(-50%);
+	background-color: #e6d2d5;
+	text-align: center;
+	color: red;
+}
+.music-lrc {
+	float: left;
+	width: 50%;
+	height: 300px;
+	position: relative;
+	overflow: hidden;
+}
+.music-lrc .lic-box {
+	position: absolute;
+	width: 100%;
+	color: white;
+	font-family: kaiti;
+	font-size: 30px;
+	top: 50%;
+	left: 50%;
+	margin-top: -150px;
+	transform: translateX(-50%);
+	height: 200px;
+	padding: 20px 0;
+}
+.lic-box>div {
+	box-sizing: border-box;
+	/* height: 20%; */
+	line-height: 40px;
+	width: 100%;
+	text-align: center;
+}
+.music-controls {
+	width: 100%;
+	height: 200px;
+}
+.tiao {
+	position: relative;
+	width: 100%;
+	height: 80px;
+	overflow: hidden;
+	/* background: deeppink; */
+}
+.bar {
+	margin: 10px 0 40px;
+	padding: 0 20px;
+	text-align: center;
+}
+#canvas {
+	position: absolute;
+	width: 800px;
+	height: 80px;
+	left: 50%;
+	margin-left: -400px;
+}
+.music-controls .controls {
+	text-align: center;
+	/* margin: 20px 0; */
+}
+.music-controls .controls div {
+	display: inline-block;
+}
+/* 唱片start */
+.record {
+	-webkit-animation: playmove 3s infinite linear;
+	animation: playmove 3s infinite linear;
+}
+#pointer {
+	cursor: pointer;
+}
+@-webkit-keyframes playmove {
+	from{
+		-webkit-transform: rotate(0deg);
+	}
+	to{
+		-webkit-transform: rotate(360deg);
+	}
+}
+@-ms-keyframes playmove {
+	from{
+		-ms-transform:  rotate(0deg);
+	}
+	to{
+		-ms-transform:  rotate(360deg);
+	}
+}
+.pointer-play {
+	-webkit-animation: playpointer 1s 1 linear;
+	animation: playpointer 1s 1 linear;
+}
+@-webkit-keyframes playpointer {
+	from {
+		-webkit-transform-origin: 38% 0%;
+		-webkit-transform: rotate(-30deg);
+	}
+	to {
+		-webkit-transform-origin: 38% 0%;
+		-webkit-transform: rotate(0deg);
+	}
+}
+@-ms-keyframes playpointer {
+	from {
+		-ms-transform-origin: 38% 0%;
+		-ms-transform: rotate(-30deg);
+	}
+	to {
+		-ms-transform-origin: 38% 0%;
+		-ms-transform: rotate(0deg);
+	}
+}
+.pointer-pause {
+	-webkit-animation: pausepointer 1s 1 linear;
+	-webkit-transform-origin: 38% 0%;
+	-webkit-transform: rotate(-30deg);
+	animation: pausepointer 1s 1 linear;
+	-ms-transform-origin: 38% 0%;
+	-ms-transform: rotate(-30deg);
+}
+@-webkit-keyframes pausepointer {
+	from {
+		-webkit-transform-origin: 38% 0%;
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform-origin: 38% 0%;
+		-webkit-transform: rotate(-30deg);
+	}
+}
+@-ms-keyframes pausepointer {
+	from {
+		-ms-transform-origin: 38% 0%;
+		-ms-transform: rotate(0deg);
+	}
+	to {
+		-ms-transform-origin: 38% 0%;
+		-ms-transform: rotate(-30deg);
+	}
+}
+/* 唱片end */
+/* 进度条1*/
+.mybar {
+	width: 100%;
+	height: 20px;
+	margin: 0 auto;
+	perspective: 1000px;
+	transform-origin: 50% 50%;
+	transform-style: preserve-3d;
+}
+.mybar .progress-wrapper {
+	width: 100%;
+	height: 100%;
+	transition: 0.6s;
+	transform-origin: 50% 50%;
+	transform-style: preserve-3d;
+	position: relative;
+	transform: rotateX(60deg);
+}
+.mybar .progress-wrapper div {
+	text-align: center;
+	line-height: 50px;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255,255,255,0.3);
+}
+.mybar .progress-wrapper div.back {
+	box-shadow: 0 -16px 80px rgba(0,0,0,0.15),
+				0 16px 8px -5px rgba(0,0,0,0.3),
+				0 -60px 140px rgba(254,254,254,0.6);
+	transform-origin: 50% 50%;
+	transform: translateZ(-20px);
+}
+.mybar .progress-wrapper div.front {
+	transform-origin: 50% 100%;
+	transform: translateZ(0);
+}
+.mybar .progress-wrapper div.left {
+	width: 20px;
+	height: 100%;
+	transform-origin: 0% 100%;
+	transform: rotateY(90deg);
+}
+.mybar .progress-wrapper div.right {
+	width: 20px;
+	height: 100%;
+	top: 0;
+	right: 0;
+	transform-origin: 100% 100%;
+	transform: rotateY(-90deg);
+}
+.mybar .progress-wrapper div.up {
+	height: 100%;
+	width: 100%;
+	transform-origin: 50% 0%;
+	transform: rotateX(-90deg);
+}
+.mybar .progress-wrapper div.down {
+	height: 100%;
+	width: 100%;
+	transform-origin: 50% 100%;
+	transform: rotateX(90deg);
+}
+.progress-wrapper .fill::before {
+	width: 600px;
+	height: 100%;
+	content: '';
+	display: block;
+	position: absolute;
+	margin: 0;
+	box-sizing: border-box;
+	transition: all 0.5s ease-out;
+	background-color: rgba(240,55,82,0.5);
+}
+.mybar .progress-wrapper .percent-tip {
+	width: 120px;
+	height: 50px;
+	background-color: steelblue;
+	transform: translateZ(-20px) translateY(30px);
+	box-shadow: 0 -16px 80px rgba(0,0,0,0.15),
+				0 16px 8px -5px rgba(0,0,0,0.3),
+				0 -60px 140px rgba(254,254,254,0.6);
+	color: white;
+	font-size: 20px;
+	line-height: 50px;
+	position: absolute;
+	left: 540px;
+	transition: all 0.5s ease-out;
+}
+.progress-wrapper .percent-tip::before {
+	content: '';
+	display: block;
+	width: 0;
+	height: 0;
+	border: 10px solid steelblue;
+	position: absolute;
+	left: 50px;
+	top: -17px;
+	border-top-color: transparent;
+	border-left-color: transparent;
+	border-right-color: transparent;
+}
+.progress-wrapper:hover .fill::before {
+	background-color: rgba(241,196,15,0.3);
+	cursor: pointer;
+}
+/* 进度条2 */
+#rag.range {
+	-webkit-appearance: none;
+	width: 250px;
+	display: inline-block;
+	position: relative;
+	background: -webkit-linear-gradient(#61bd12, #ddd) no-repeat,#ddd ;
+	padding: 0;
+	margin:0;
+	background-size: 100% 100%;/*设置左右宽度比例*/
+	border-radius: 10px; /*这个属性设置使填充进度条时的图形为圆角*/
+}
+input[type=range].range::-webkit-slider-thumb {
+   -webkit-appearance: none;
+	 height: 25px;
+	width: 25px;
+	margin-top: -5px; /*使滑块超出轨道部分的偏移量相等*/
+	background: #ffffff;
+	border-radius: 50%; /*外观设置为圆形*/
+	border: solid 0.125em rgba(205, 224, 230, 0.5); /*设置边框*/
+	box-shadow: 0 .125em .125em #3b4547; /*添加底部阴影*/
+}
+input[type=range].range::-webkit-slider-runnable-track{
+	height: 15px;
+	border-radius: 10px;
+	 box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112; /*轨道内置阴影效果*/
+}
+input[type=range].range:focus{
+	outline: none;
+}
+input[type=range].range::-moz-range-track {
+	height: 15px;
+	border-radius: 10px; /*将轨道设为圆角的*/
+	box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112; /*轨道内置阴影效果*/
+}
+
+input[type=range].range::-moz-range-thumb {
+	appearance: none;
+	height: 18px;
+	width: 18px;
+	margin-top: -5px; /*使滑块超出轨道部分的偏移量相等*/
+	background: #ffffff; 
+	border-radius: 50%; /*外观设置为圆形*/
+	border: solid 0.125em rgba(205, 224, 230, 0.5); /*设置边框*/
+	box-shadow: 0 .125em .125em #3b4547; /*添加底部阴影*/
+}
+
+input[type=range].range::-moz-range-progress {
+	background: linear-gradient(#059CFA, #059CFA) no-repeat;
+	height: 13px;	 
+	border-radius: 10px;
+}
+
+input[type=range].range::-ms-track {
+	height: 18px;
+	border-radius: 10px;
+	box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112;
+	border-color: transparent; /*去除原有边框*/
+	color: transparent; /*去除轨道内的竖线*/
+}
+
+input[type=range].range::-ms-thumb {
+	border: solid 0.125em rgba(205, 224, 230, 0.5);
+	height: 18px;
+	width: 18px;
+	border-radius: 50%;
+	background: #ffffff;
+	margin-top: -5px;
+	box-shadow: 0 .125em .125em #3b4547;
+}
+
+input[type=range].range::-ms-fill-lower {
+	/*进度条已填充的部分*/
+	height: 15px;
+	border-radius: 10px;
+	background: #61bd12;
+}
+
+input[type=range].range.range::-ms-fill-upper {
+	/*进度条未填充的部分*/
+	height: 15px;
+	border-radius: 10px;
+	background: #ffffff;
+}
+
+input[type=range].range:focus::-ms-fill-lower {
+	background: #61bd12;
+}
+
+input[type=range].range:focus::-ms-fill-upper {
+	background: #ffffff;
+}
+/*  
+   对话气泡  
+   用法：使用.speech-bubble和.speech-bubble-DIRECTION类  
+   <div class="speech-bubble speech-bubble-top">Hi there</div>  
+*/  
+
+.speech-bubble {   
+  position: relative;   
+  background: linear-gradient(
+  	to right bottom,
+  	rgba(255,255,255,0.7),
+  	rgba(255,255,255,0.3)
+  );   
+ /* width: 200px;   
+  height: 150px; */
+  padding: 0 20px;
+  line-height: 50px; /* 垂直居中 */  
+  color: white;   
+  text-align: center;   
+  border-radius: 10px;   
+    
+  font-family: sans-serif;   
+}
+.music-volume {
+	position: relative;
+}
+.musicListBox{
+	visibility: hidden;
+	position: absolute;
+	bottom: 100%;
+	right: 50%;
+	transform: translateX(50%) translateY(-20px);
+	width: 400px;
+	height: 400px;
+	z-index: 2;
+}
+.music-list {
+	position: relative;
+}
+.music-list:hover .musicListBox {
+	visibility: visible;
+}
+.music-volume:hover .volumeBox {
+	visibility: visible;
+}
+.volumeBox {
+	visibility: hidden;
+	bottom: 100%;
+	right: 50%;
+	transform: translateX(50%) translateY(-10px);
+	position: absolute;
+}
+.speech-bubble::after {   
+  content: '';   
+  position: absolute;   
+    
+  width: 0;   
+  height: 0;   
+    
+  border: 15px solid;   
+}   
+    
+    
+/* 箭头的位置 */  
+.speech-bubble-top::after {   
+	border-color: transparent;
+	border-bottom-color: white;   
+	left: 50%;   
+	bottom: 100%;   
+	margin-left: -15px;     
+}   
+.speech-bubble-right::after {
+	border-color: transparent;
+	border-left-color: white;   
+	left: 100%;   
+	top: 50%;   
+	margin-top: -15px;      
+}   
+    
+.speech-bubble-bottom::after {
+	border-color: transparent;
+	border-top-color: rgba(255,255,255,0.3);   
+	top: 100%;   
+	left: 50%;   
+	margin-left: -15px;
+}   
+    
+.speech-bubble-left::after {   
+	border-color: transparent;
+	border-right-color: white;   
+	top: 50%;   
+	right: 100%;   
+	margin-top: -15px;      
+}  
+/* 留言板 */
+.messageBoard {
+	padding: 20px 0;
+	width: 100%;
+	text-align: center;
+	/* background-color: pink; */
+}
+.messageBoard div {
+	border: 0;
+	display: inline-block;
+	height: 80px;
+}
+.messageBoard .board-input {
+	box-sizing: border-box;
+	width: 60%;
+	padding: 10px;
+	padding-right: 0;
+	background: linear-gradient(to right,rgba(0,0,0,0.4),rgba(0,0,0,0.3));
+	border-radius: 20px 0 0 20px;
+	box-shadow: 0 -16px 80px rgba(0,0,0,0.15),
+				0 16px 8px -5px rgba(0,0,0,0.3),
+				0 -60px 140px rgba(254,254,254,0.6);
+}
+.messageBoard .borad-button {
+	box-sizing: border-box;
+	width: 20%;
+	min-width: 120px;
+	padding: 10px;
+	padding-left: 0;
+	background: linear-gradient(to right,rgba(10,220,220,0.4),rgba(10,180,220,1));
+	border-radius: 0 20px 20px 0;
+	transform: translateX(-5px);
+	box-shadow: 0 -16px 80px rgba(0,0,0,0.15),
+				0 16px 8px -5px rgba(0,0,0,0.3),
+				0 -60px 140px rgba(254,254,254,0.6);
+}
+.board-input input {
+	border: 0;
+	border-radius: 20px 0 0 20px;
+	padding-left: 10px;
+	font-size: 20px;
+	color: white;
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(to right,rgba(255,255,255,0.4),rgba(255,255,255,0.7));
+}
+/* .board-input<input:focus {
+	background: linear-gradient(to right,rgba(255,200,0,0.4),rgba(255,200,0,1));
+} */
+.focus-input {
+	background: linear-gradient(to right,rgba(255,200,0,0.4),rgba(255,200,0,1))!important;
+}
+.borad-button button {
+	height: 100%;
+	width: 100%;
+	border-radius: 0 20px 20px 0;
+	border: 0;
+	font-family: kaiti;
+	font-size: 20px;
+	background: linear-gradient(to right,rgba(10,200,245,0.4),rgba(10,200,245,1));
+}
+.borad-button:hover {
+	color: red;
+	background: linear-gradient(to right,rgba(255,200,0,0.4),rgba(255,200,0,1));
+}
+.borad-button:hover button {
+	background: linear-gradient(to right,rgba(255,255,0,0.4),rgba(255,255,0,1));
+}

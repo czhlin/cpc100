@@ -1,0 +1,93 @@
+
+/* 轮播图 */
+.mslide {
+	width: 100%;
+	position: relative;
+}
+.carousel-indicators {
+	z-index: 1!important;
+}
+.item {
+	height: 80vh;
+}
+.item img {
+	width: 100%;
+}
+/* 视差滚动 */
+.sight {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+}
+/* .sight::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to top,#0a2a43,transparent);
+	z-index: 1;
+}
+.sight::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #0a2a43;
+	z-index: 1;
+	mix-blend-mode: color;
+} */
+.sight img {
+	position: absolute;
+	top: 0;
+	/* left: 0; */
+	width: 100%;
+	/* object-fit: cover;
+	pointer-events: none; */
+}
+#moon {
+	margin:50px 20px 0 0;
+	right: 0;
+	width: 20%;
+	border-radius: 50%;
+}
+/* #road {
+	width: 50%;
+} */
+#bg1 {
+	position: relative;
+	z-index: -1;
+}
+#text {
+	top: 100px;
+	position: absolute;
+	color: #fff;
+	font-family: STXinwei;
+	font-size: 5em;
+	z-index: 0;
+}
+#road {
+	z-index: 1;
+}
+
+@media (max-width: 1314px) {
+	#text {
+		font-size: 3em;
+	}
+	.item {
+		height: 45vh;
+	}
+}
+@media (max-width: 680px) {
+	#text {
+		font-size: 2em;
+	}
+	.item {
+		height: 30vh;
+	}
+}

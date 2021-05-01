@@ -1,0 +1,237 @@
+/* 阿里巴巴图标 */
+@font-face {
+  font-family: 'iconfont';  /* Project id 2521101 */
+  src: url('//at.alicdn.com/t/font_2521101_7cehfrx5nbs.woff2?t=1619847724390') format('woff2'),
+       url('//at.alicdn.com/t/font_2521101_7cehfrx5nbs.woff?t=1619847724390') format('woff'),
+       url('//at.alicdn.com/t/font_2521101_7cehfrx5nbs.ttf?t=1619847724390') format('truetype');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+	color: white;
+    font-size:30px;
+	font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+	cursor: pointer;
+}
+.iconfont:hover {
+	color: yellow;
+}
+/* 设置自己的body */
+/* html,body {
+	width: 100%;
+	height: 100%;
+} */
+.mybody {
+	/* min-height: 100vh; */
+	width: 100%;
+	background:linear-gradient(to right top, #FFD3A5,#FD6585);
+	background-repeat: no-repeat;
+	z-index: -1!important;
+}
+/* 内容中心区域开始 */
+.mymain {
+	margin: 0 auto;
+	margin-top: 13vh;
+	width: 95%;
+	min-width: 382px;
+	z-index: -2;
+}
+.glass {
+	width: 100%;
+	min-height: 100vh;
+	background: white;
+	padding: 20px 0;
+	border-radius: 20px;
+	position: relative;
+	background: linear-gradient(
+		to right bottom,
+		rgba(255,255,255,0.7),
+		rgba(255,255,255,0.3)
+	);
+}
+.circle1,
+.circle2 {
+	background: white;
+	background: linear-gradient(
+		to right bottom,
+		rgba(255,255,255,0.7),
+		rgba(255,255,255,0.3)
+	);
+	height: 10rem;
+	width: 10rem;
+	position: absolute;
+	border-radius: 50%;
+	z-index: -1;
+}
+.circle1 {
+	top: -3.5%;
+	right: -3.5%;
+}
+.circle2 {
+	bottom: -3.5%;
+	left: -3.5%;
+}
+/* 导航栏开始 */
+nav {
+	background:linear-gradient(90deg, rgba(255, 0, 0, 1), rgba(250, 240, 8, 1));
+	height: 80px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	min-width: 382px;
+	z-index: 2;
+}
+label.logo {
+	color: #FFFFFF;
+	font-size: 35px;
+	line-height: 80px;
+	padding: 0 20px;
+	font-weight: bold;
+	font-family: STXinwei;
+}
+label.logo a {
+	color: white;
+}
+nav ul {
+	float: right;
+	margin-right: 20px;
+	/* font-family: STKaiti; */
+}
+nav ul li {
+	display: inline-block;
+	line-height: 80px;
+	margin: 0 5px;
+}
+nav ul li a {
+	color: #FFFFFF;
+	font-size: 17px;
+	padding: 7px 13px;
+	border-radius: 3px;
+	text-transform: uppercase;
+}
+nav a.active
+,nav a:hover {
+	color: #ed5a65;
+	background:white;
+	transition: .5s;
+}
+.checkbtn {
+	font-size: 30px;
+	color: #FFFFFF;
+	float: right;
+	line-height: 80px;
+	margin-right: 40px;
+	cursor: pointer;
+	display: none;
+}
+#check {
+	display: none;
+}
+@media (max-width: 952px) {
+	label.logo {
+		font-size: 30px;
+		padding-left: 50px;
+	}
+	nav ul li a {
+		font-size: 16px;
+	}
+}
+@media (max-width: 858px) {
+	.checkbtn {
+		display: block;
+	}
+	nav ul {
+		position: fixed;
+		width: 100%;
+		background:#2b73af; 
+		top: 80px;
+		left: -120%;
+		text-align: center;
+		transition: all .5s;
+		border-radius:0 20px;
+	}
+	nav ul li {
+		display: block;
+		margin: 50px 0;
+		line-height: 30px;
+	}
+	nav ul li a {
+		font-size: 20px;
+	}
+	a:hover
+	,a.active {
+		background: none;
+		color: #0082E6;
+	}
+	#check:checked ~ ul {
+		left: 0;
+	}
+}
+/* 导航栏结束*/
+/* footer start */
+main {
+	min-height: 100%;
+	padding-bottom: 50px;
+}
+.footer {
+	height: 50%;
+	margin-top: -40px;
+	position: relative;
+	width: 100%;
+}
+.outer {
+	width: 240px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.outer li {
+	text-align: center;
+}
+.heart_icon {
+	margin: 0 10px;
+	position: relative;
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	-webkit-animation:hearttd 1.5s infinite;
+}
+.heart_icon::before {
+	content: '';
+	width: 8px;
+	height: 12px;
+	background: #fe3232;
+	position: absolute;
+	border-radius: 10px 10px 0 0;
+	-webkit-transform: rotate(-45deg);
+}
+.heart_icon::after {
+	content: '';
+	width: 8px;
+	height: 12px;
+	background: #fe3232;
+	position: absolute;
+	border-radius: 10px 10px 0 0;
+	left: 9px;
+	-webkit-transform: rotate(45deg);
+}
+/*定义关键帧列表，实现 跳动的效果*/
+
+@-webkit-keyframes hearttd{
+	/*以百分比来分配样式效果，此处分为三个状态*/
+	0%{
+	/*保持不变*/
+		-webkit-transform:scale(1);
+	}
+	50%{
+	/*  transform 对元素进行旋转(translate)、缩放(scale)、移动(rotate)或倾斜(skew)。scale(1.5):表示该元素放大至1.5倍，原始属性为1。
+	*/
+		-webkit-transform:scale(1.5);
+	}
+	100%{
+		-webkit-transform:scale(1);
+	}
+}
+/* footer end */

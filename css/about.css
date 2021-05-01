@@ -1,0 +1,119 @@
+/* 献礼卡start */
+.card {
+	width: 570px;
+	height: 320px;
+	background: #fff;
+	margin: 50px auto 100px;
+	transform-style: preserve-3d;
+	transform: perspective(2000px);
+	box-shadow: inset 300px 0 50px rgba(0,0,0,0.5),0 20px 100px rgba(0,0,0,0.5);
+	transition: 1s;
+}
+.card:hover {
+	transform: perspective(2000px) rotate(-10deg);
+	box-shadow: inset 20px 0 50px rgba(0,0,0,0.5),0 10px 100px rgba(0,0,0,0.5);
+}
+.card::before {
+	content: '';
+	position: absolute;
+	top: -5px;
+	left: 0;
+	width: 100%;
+	height: 5px;
+	background: #eef7f2;
+	transform: skewX(-45deg);
+}
+.card::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: -5px;
+	width: 5px;
+	height: 100%;
+	background: #b5aa90;
+	transform: skewY(-45deg);
+}
+.card .imgBox {
+	user-select: none; /*不可选取*/
+	width: 100%;
+	/* height: 100%; */
+	position: relative;
+	transform-origin: left;
+	transition: 2s cubic-bezier(0.15, 1.7, 0.84, 0.58);
+}
+.card:hover .imgBox {
+	transform: rotateY(-155deg);
+}
+.card img {
+	width: 100%;
+	height: 100%;
+}
+.card .details { /*文本效果*/
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left: 0;
+	box-sizing: border-box;
+	padding: 0 10px;
+	z-index: -1;
+	background-color: #f7f4ed;
+}
+#canvas {
+	position: absolute;
+}
+.details .text {
+	width: 215px;
+	float: right;
+	font-family: 'STKaiti';
+	font-size: 18px;
+}
+.details .text .myp {
+	font-weight: bold;
+	text-indent: 2em;
+}
+/* 献礼卡end */
+/* 介绍框start */
+.aboutBox.container {
+	width: 100%;
+}
+.aboutBox {
+	width: 100%;
+	text-align: center;
+}
+.aboutBox .itemBox {
+	height: 200px;
+	padding: 1px;
+}
+.aboutBox .itemBox:hover img {
+	opacity: 0;
+}
+.aboutBox .item {
+	width: 100%;
+	height: 100%;
+	background-color: #c04851;
+}
+.aboutBox .item img {
+	width: 100%;
+	height: 100%;
+	transition: 1s ease-in-out;
+	z-index: 1;
+}
+.aboutBox .text {
+	width: 100%;
+}
+.aboutBox a:hover {
+	color: red;
+}
+.aboutBox p {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	color: white;
+	padding: 0 20px;
+	visibility: hidden;
+}
+.aboutBox .itemBox:hover p {
+	visibility: visible;
+}
+/* 介绍框end */
