@@ -1,0 +1,180 @@
+/* 内容简介 */
+.glass {
+	padding-top: 0;
+}
+.introduce {
+	width: 100%;
+	border-radius: 20px 20px 0 0;
+	font-family: kaiti;
+	background: #ee2746;
+	color: white;
+	padding: 20px;
+}
+.introduce .title {
+	width: 100%;
+	text-align: center;
+	color: white;
+}
+.title h1 {
+	margin-top: 0;
+	font-size: 40px;
+}
+.introduce .details {
+	text-indent: 2em;
+	font-size: 30px;
+}
+#details {
+	padding-bottom: 10px;
+	border-bottom: 2px dashed white;
+}
+/* 英雄卡片 */
+.cards {
+	left: 0%;
+	width: 100%!important;
+	font-family: kaiti;
+}
+.cards .card {
+	height: 500px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	/* background: #000000; */
+	box-shadow: 11px 14px 10px -6px rgba(0,0,0,0.75);
+	-webkit-box-shadow: 11px 14px 10px -6px rgba(0,0,0,0.75);
+	-moz-box-shadow: 11px 14px 10px -6px rgba(0,0,0,0.75);
+	z-index: 1;
+	transition: all 0.5s linear; 
+	overflow: hidden;
+}
+.card .imgBox {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	border-radius: 10px 0 0 0;
+	transition: all 0.5s linear;
+}
+.card:hover {
+	background-color:  #ee2746;
+}
+.card:hover .imgBox {
+	position: relative;
+	height: 200px;
+	border-radius: 20px;
+}
+.card:hover .imgBox img {
+	height: auto;
+}
+.card:hover .textBox {
+	font-weight: 700;
+	color: white;
+	/* font-size: 100px; */
+}
+.expend {
+	position: absolute!important;
+	width: 100%!important;
+	height: auto!important;
+	background-color: white!important;
+	z-index: 1!important;
+}
+.expend .imgBox {
+	width: 40%;
+	margin: 0 auto;
+	position: relative;
+	height: auto;
+}
+.expend:hover .imgBox {
+	height: auto;
+}
+.expend:hover .textBox {
+	color: black;
+}
+.expend .textBox {
+	height: auto!important;
+}
+.expend .text {
+	height: auto!important;
+}
+.expend .text p {
+	text-align: left;
+	text-indent: 2em;
+	font-size: 30px;
+}
+.imgBox img {
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+
+.card .textBox {
+	width: 100%;
+	padding: 10px;
+	height: 300px;
+	background-color: transparent;
+}
+.textBox .name {
+	position: absolute;
+	color: white;
+	height: 20%;
+	width: 100%;
+	text-align: center;
+	bottom: 0;
+}
+.expend .name {
+	position: relative;
+	color: black;
+	bottom: auto;
+}
+.card:hover .name {
+	position: relative;
+}
+.textBox .text {
+	width: 100%;
+	height: 45%;
+	background: transparent;
+	text-align: center;
+	overflow-x: hidden;
+}
+.textBox .text::-webkit-scrollbar { 
+	width: 0 !important 
+}
+.text p {
+	font-size: 20px;
+	font-family: kaiti;
+}
+.textBox .textIcon {
+	width: 100%;
+	height: 30%;
+	text-align: center;
+	font-size: 20px;
+	background: transparent;
+}
+.textIcon a {
+	color: white;
+}
+.textIcon a:hover {
+	color: white;
+}
+.textIcon a:visited {
+	color: white;
+}
+.textIcon span {
+	display: inline-block;
+	background-color: #2376b7;
+	width: 100px;
+	height: 50px;
+	color: white;
+	margin-top: 25px;
+	line-height: 50px;
+	border-radius: 10px;
+	cursor: pointer;
+	box-shadow: 18px 18px 30px rgba(0,0,0,0.2),
+	-18px -18px 30px rgba(35,118,183,0.5);
+	transition: all 0.2s ease-out; 
+}
+.textIcon span:hover {
+	box-shadow: 0 0 0 rgba(0,0,0,0.2),
+	0 0 0 rgba(35,118,183,0.8),
+	inset 18px 18px 30px rgba(0,0,0,0.1),
+	inset -18px -18px 30px rgba(35,118,183,1);
+	/* font-size: 19px; */
+}

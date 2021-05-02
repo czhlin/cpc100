@@ -1,5 +1,5 @@
 .music-body {
-	width: 100%;
+	width: 85%;
 	margin: 50px auto;
 	background:linear-gradient(to right top,rgba(0,0,0,0.3),rgba(0,0,0,0.5));
 	background-size: 100%;
@@ -10,8 +10,12 @@
 	box-shadow: 18px 21px 4px 1px rgba(0,0,0,0.75);
 }
 .music-div {
-	width: 100%;
-	background:url(../img/gq.jpg) no-repeat,#7c1823;
+	position: relative;
+	width: 100%!important;
+	background:url(../img/gq.jpg) no-repeat,rgb(103,0,0);
+	background-position: center;
+	z-index: 0;
+	overflow: hidden;
 }
 .music-show {
 	width: 100%;
@@ -118,14 +122,14 @@
 	width: 100%;
 	height: 200px;
 }
-.tiao {
+.music-controls .tiao {
 	position: relative;
 	width: 100%;
 	height: 80px;
 	overflow: hidden;
 	/* background: deeppink; */
 }
-.bar {
+.music-controls .bar {
 	margin: 10px 0 40px;
 	padding: 0 20px;
 	text-align: center;

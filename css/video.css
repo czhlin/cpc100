@@ -1,5 +1,5 @@
 .myVideo-div {
-	width: 100%;
+	width: 100%!important;
 	height: 100vh;
 	position: relative;
 	background: url(../img/dh.png) no-repeat 0 100%,red;
@@ -48,17 +48,18 @@
 .videoBar .tiemBox {
 	float: left;
 	width: 20%;
+	min-width: 73.44px;
 	height: 100%;
 	color: white;
 	text-align: center;
 	line-height: 50px;
-	/* background-color: green; */
 }
 .videoBar .bar input[type="range"] {
 	position: absolute;
 	top: 50%;
-	width: 100%;
-	transform: translateY(-50%);
+	left: 50%;
+	width: 95%;
+	transform: translateY(-50%) translateX(-50%);
 }
 .myVideo-body .myVideo-controls {
 	background-color: #c5708b;

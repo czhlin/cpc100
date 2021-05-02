@@ -45,7 +45,7 @@
 				<!-- class="active" -->
 				<li><a class="active" href="index.html">首页</a></li>
 				<li><a href="party-history.html">党史介绍</a></li>
-				<li><a href="#">英雄人物</a></li>
+				<li><a href="heroes.html">英雄人物</a></li>
 				<li><a href="memory.html">经典回忆</a></li>
 				<li><a href="about.html">关于我们</a></li>
 			</ul>
@@ -61,7 +61,7 @@
 				<img src="img/mountain.png" id="mountain" alt="">
 				<img src="img/road.png" id="road" alt="">
 				<img src="img/gq.jpg" id="bg1" alt="">
-				<h2 id="text">百年建党，青春献礼</h2>
+				<h2 id="text"><span id="mtext">百年建党，青春献礼</span><span class="blink">|</span></h2>
 			</section>
 			<script type="text/javascript">
 				let bg=document.getElementById("bg");
@@ -147,31 +147,17 @@
 	</footer>
 	<!-- 引入jquery.js -->
 	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/type.js" type="text/javascript" charset="utf-8"></script>
 	<!-- 引入bootstrap.js -->
 	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/jquery.barrager.min.js" type="text/javascript" charset="utf-8"></script>
 	<script>
-	  var s = '百年建党，青春献礼';
-	  var con = $('#text');
-	  var index = 0;
-	  var length = s.length;
-	  var tId = null;
-	  
-	  function start(){
-	    con.text('');
-	    
-	    tId=setInterval(function(){
-	      con.append(s.charAt(index));
-	      if(index++ === length){
-			clearInterval(tId);
-			index = 0;
-			start()
-	      }
-	    },400);
-	  }
-	  
-	  start();
-	 
+	var texts=[
+		'百年建党，青春献礼',
+		'党旗迎风空中飘，鲜花绽放吐芬芳',
+		'党的华诞到身旁，齐歌共舞不忘党'
+	]
+	 typed($('#mtext'),texts);
 	</script>
 </body>
 </html>

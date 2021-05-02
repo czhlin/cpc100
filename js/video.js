@@ -34,6 +34,7 @@
 			videolist.options[i]=new Option(videos[i].name);
 			videolist.options[i].setAttribute('value',videos[i].name);
 		}
+		videolist.selectedIndex=0;
 		video.src=videos[0].src;
 		video.pause();
 		video.addEventListener("timeupdate",function(){

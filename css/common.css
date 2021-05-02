@@ -235,3 +235,15 @@ main {
 	}
 }
 /* footer end */
+/* 打字动画 */
+@keyframes blink{
+	from{
+		color: #FFFFFF;
+	}
+	to{
+		color: transparent;
+	}
+}
+.blink {
+	animation: blink 0.8s steps(100) infinite normal;
+}
