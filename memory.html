@@ -56,173 +56,169 @@
 		</header>
 		<!-- 网页中心区域 -->
 		<main class="mymain">
-			<div class="glass" >
-				<div class="container music-div"  id="music">
-					<div class="music-body">
-						<div class="music-show row">
-							<div class="music-img col-lg-6 col-md-6 col-sm-12 col-xs-12">
-								<img id="pointer" onclick="playMusic()" src="img/pointer.png"/>
-								<div class="imgBox">
-									<img id="record" class="record" src="./img/musicbg.jpg">
-								</div>
-							</div>
-							<div class="music-lrc col-lg-6 col-md-6 col-sm-12 col-xs-12">
-								<div class="lic-box">
-									<div style="font-size: 18px;">
-										正在播放：<span id="cur_music" >0/0</span>
-										<span id="music_name">音乐名字</span>
-									</div>
-									<div id="lrc1"></div>
-									<div id="lrc2"></div>
-									<div id="lrc3" style="color: yellow;"></div>
-									<div id="lrc4"></div>
-									<div id="lrc5"></div>
-								</div>
+			<div class="container music-div"  id="music">
+				<div class="music-body">
+					<div class="music-show row">
+						<div class="music-img col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<img id="pointer" onclick="playMusic()" src="img/pointer.png"/>
+							<div class="imgBox">
+								<img id="record" class="record" src="./img/musicbg.jpg">
 							</div>
 						</div>
-						<div class="music-controls">
-							<div class="tiao">
-								<canvas id="canvas" width="800" height="80"></canvas>
-								<audio id="audio"  autoplay="autoplay">
-									当前浏览器不支持audio
-								</audio>
-							</div>
-							<div class="bar">
-								<div class="mybar">
-									<div class="progress-wrapper">
-										<div class="back fill"></div>
-										<div class="front fill"></div>
-										<div class="left"></div>
-										<div class="right"></div>
-										<div class="up fill"></div>
-										<div class="down fill"></div>
-										<div class="percent-tip">
-											<span id="time">时间</span>
-										</div>
-									</div>
+						<div class="music-lrc col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<div class="lic-box">
+								<div style="font-size: 18px;">
+									正在播放：<span id="cur_music" >0/0</span>
+									<span id="music_name">音乐名字</span>
 								</div>
-								<!-- 音乐播放列表：<input id="rag2" class="range" type="range" min="0" max="100" value="0"/> --><!-- <span id="time">时间</span> -->
-							</div>
-							<div class="controls">
-								<div class="music-list">
-									<span>
-										<i class="iconfont">&#xe60f;</i>
-									</span>
-									<div class="musicListBox speech-bubble speech-bubble-bottom">
-										<div class="selectBox">
-											<select id="list" size="10" onchange="clickMusic()"></select>
-										</div>
-									</div>
-								</div>
-								<div class="music-style">
-									<span onclick="changeStyle()">
-										<i id="playStyle" class="iconfont">&#xe6a1;</i>
-									</span>
-								</div>
-								<div class="music-last">
-									<span onclick="lastMusic()">
-										<i class="iconfont">&#xe63f;</i>
-									</span>
-								</div>
-								<div class="music-play">
-									<span onclick="playMusic(false)">
-										<i id="btn" class="iconfont">&#xe616;</i>
-									</span>
-								</div>
-								<div class="music-next">
-									<span onclick="nextMusic()">
-										<i class="iconfont">&#xe63e;</i>
-									</span>
-								</div>
-								<div class="music-volume">
-									<span>
-										<i class="iconfont">&#xeb5f;</i>
-									</span>
-									<div class="volumeBox speech-bubble speech-bubble-bottom">
-										<input id="rag" class="range " type="range" min="0" max="100" value="0"/>
-									</div>
-								</div>
-								<div class="my-video">
-									<span onclick="openVideo()">
-										<i class="iconfont">&#xe634;</i>
-									</span>
-								</div>
+								<div id="lrc1"></div>
+								<div id="lrc2"></div>
+								<div id="lrc3" style="color: yellow;"></div>
+								<div id="lrc4"></div>
+								<div id="lrc5"></div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="container myVideo-div none" id="myVideo">
-					<div class="myVideo-body">
-						<div class="videoBox">
-							<!-- controls="controls" -->
-							<video id="video" autoplay="autoplay"></video>
+					<div class="music-controls">
+						<div class="tiao">
+							<canvas id="canvas" width="800" height="80"></canvas>
+							<audio id="audio"  autoplay="autoplay">
+								当前浏览器不支持audio
+							</audio>
 						</div>
-						<div class="videoBar">
-							<div class="bar">
-								<input class="myRange" type="range" min="0" max="100" value="50">
-							</div>
-							<div class="tiemBox">
-								<span id="videoTime">时间</span>
-							</div>
-						</div>
-						<div class="myVideo-controls">
-							<div class="video-list">
-								<span onclick="listVideo()">
-									<i class="iconfont">&#xe609;</i>
-								</span>
-								<div class="videoListBox speech-bubble speech-bubble-bottom">
-									<div class="selectBox">
-										<select id="videoList" size="10" onchange="clickVideo()">
-										</select>
+						<div class="bar">
+							<div class="mybar">
+								<div class="progress-wrapper">
+									<div class="back fill"></div>
+									<div class="front fill"></div>
+									<div class="left"></div>
+									<div class="right"></div>
+									<div class="up fill"></div>
+									<div class="down fill"></div>
+									<div class="percent-tip">
+										<span id="time">时间</span>
 									</div>
 								</div>
 							</div>
-							<div class="video-fill">
-								<span onclick="fillVideo()">
-									<i class="iconfont">&#xe628;</i>
+							<!-- 音乐播放列表：<input id="rag2" class="range" type="range" min="0" max="100" value="0"/> --><!-- <span id="time">时间</span> -->
+						</div>
+						<div class="controls">
+							<div class="music-list">
+								<span>
+									<i class="iconfont">&#xe60f;</i>
+								</span>
+								<div class="musicListBox speech-bubble speech-bubble-bottom">
+									<div class="selectBox">
+										<select id="list" size="10" onchange="clickMusic()"></select>
+									</div>
+								</div>
+							</div>
+							<div class="music-style">
+								<span onclick="changeStyle()">
+									<i id="playStyle" class="iconfont">&#xe6a1;</i>
 								</span>
 							</div>
-							<div class="video-last">
-								<span onclick="lastVideo()">
-									<i class="iconfont">&#xe63c;</i>
+							<div class="music-last">
+								<span onclick="lastMusic()">
+									<i class="iconfont">&#xe63f;</i>
 								</span>
 							</div>
-							<div class="video-play">
-								<span onclick="playVideo()">
-									<i class="iconfont">&#xe62a;</i>
+							<div class="music-play">
+								<span onclick="playMusic(false)">
+									<i id="btn" class="iconfont">&#xe616;</i>
 								</span>
 							</div>
-							<div class="video-next">
-								<span onclick="nextVideo()">
-									<i class="iconfont">&#xe63b;</i>
+							<div class="music-next">
+								<span onclick="nextMusic()">
+									<i class="iconfont">&#xe63e;</i>
 								</span>
 							</div>
-							<div class="video-volume">
+							<div class="music-volume">
 								<span>
 									<i class="iconfont">&#xeb5f;</i>
 								</span>
 								<div class="volumeBox speech-bubble speech-bubble-bottom">
-									<input class="volume-range myRange" type="range" min="0" max="100" value="100"/>
+									<input id="rag" class="range " type="range" min="0" max="100" value="0"/>
 								</div>
 							</div>
-							<div class="video-music">
-								<span onclick="opemMusic()">
-									<i class="iconfont">&#xe683;</i>
+							<div class="my-video">
+								<span onclick="openVideo()">
+									<i class="iconfont">&#xe634;</i>
 								</span>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="messageBoard">
-					<div class="board-input">
-						<input type="text" name="" id="">
+			</div>
+			<div class="container myVideo-div none" id="myVideo">
+				<div class="myVideo-body">
+					<div class="videoBox">
+						<!-- controls="controls" -->
+						<video id="video" autoplay="autoplay"></video>
 					</div>
-					<div class="borad-button">
-						<button type="button" onclick="sendMessage()">发送弹幕！</button>
+					<div class="videoBar">
+						<div class="bar">
+							<input class="myRange" type="range" min="0" max="100" value="50">
+						</div>
+						<div class="tiemBox">
+							<span id="videoTime">时间</span>
+						</div>
+					</div>
+					<div class="myVideo-controls">
+						<div class="video-list">
+							<span onclick="listVideo()">
+								<i class="iconfont">&#xe609;</i>
+							</span>
+							<div class="videoListBox speech-bubble speech-bubble-bottom">
+								<div class="selectBox">
+									<select id="videoList" size="10" onchange="clickVideo()">
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="video-fill">
+							<span onclick="fillVideo()">
+								<i class="iconfont">&#xe628;</i>
+							</span>
+						</div>
+						<div class="video-last">
+							<span onclick="lastVideo()">
+								<i class="iconfont">&#xe63c;</i>
+							</span>
+						</div>
+						<div class="video-play">
+							<span onclick="playVideo()">
+								<i class="iconfont">&#xe62a;</i>
+							</span>
+						</div>
+						<div class="video-next">
+							<span onclick="nextVideo()">
+								<i class="iconfont">&#xe63b;</i>
+							</span>
+						</div>
+						<div class="video-volume">
+							<span>
+								<i class="iconfont">&#xeb5f;</i>
+							</span>
+							<div class="volumeBox speech-bubble speech-bubble-bottom">
+								<input class="volume-range myRange" type="range" min="0" max="100" value="100"/>
+							</div>
+						</div>
+						<div class="video-music">
+							<span onclick="opemMusic()">
+								<i class="iconfont">&#xe683;</i>
+							</span>
+						</div>
 					</div>
 				</div>
-				<div class="circle1"></div>
-				<div class="circle2"></div>
+			</div>
+			<div class="messageBoard">
+				<div class="board-input">
+					<input type="text" name="" id="">
+				</div>
+				<div class="borad-button">
+					<button type="button" onclick="sendMessage()">发送弹幕！</button>
+				</div>
 			</div>
 		</main>
 		<!-- 网页底部区域 -->

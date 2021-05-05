@@ -21,6 +21,8 @@
 		<link rel="stylesheet" href="./css/common.css">
 		<!-- 引入party-history.css文件 -->
 		<link rel="stylesheet" type="text/css" href="css/party-history.css"/>
+		<link rel="stylesheet" type="text/css" href="css/aos.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.css"/>
 		<!-- 引入bootstrap的css文件 -->
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
@@ -29,7 +31,7 @@
 		<!-- 网页头部区域 -->
 		<header>
 			<!-- 导航栏 -->
-			<nav>
+			<nav style="z-index: 5;">
 				<input type="checkbox" id="check" />
 				<label for="check" class="checkbtn">
 					<i class="">
@@ -44,17 +46,824 @@
 				<ul>
 					<!-- class="active" -->
 					<li><a href="index.html">首页</a></li>
-					<li><a class="active" href="#">新民主主义革命</a></li>
-					<li><a href="#">社会主义探索</a></li>
-					<li><a href="#">特色社会主义</a></li>
+					<li index="1"><a class="active" href="javascript:;">新民主主义革命</a></li>
+					<li index="2"><a href="javascript:;">社会主义探索</a></li>
+					<li index="3"><a href="javascript:;">特色社会主义</a></li>
 				</ul>
 			</nav>
 		</header>
 		<!-- 网页中心区域 -->
-		<main class="mymain">
-			<div class="glass" >
-				<div class="circle1"></div>
-				<div class="circle2"></div>
+		<main class="content">
+			<div class="featured_category bg_image_1" data-aos="fade-up" data-aos-duration="700">
+				<div class="container">
+					<div class="historys">
+						<div class="history">
+							<div class="row">
+								<div class="featured_category_item col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="600">
+									<div class="imgBox">
+										<img src="img/yida.jpg" alt="img">
+									</div>
+									<div class="featured_category_info">
+										<h6 class="featured_category_heading"><a href="#">中共一大</a></h6>
+										<p class="featured_category_number"><span>01</span>建党精神</p>
+									</div>
+								</div>
+								<div class="featured_category_item col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="600">
+									<div class="imgBox">
+										<img src="img/wsyd.png" alt="img">
+									</div>
+									<div class="featured_category_info">
+										<h6 class="featured_category_heading"><a href="#">五四运动</a></h6>
+										<p class="featured_category_number"><span>02</span> 爱国精神</p>
+									</div>
+								</div>
+								<div class="featured_category_item col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="600">
+									<div class="imgBox">
+										<img src="img/kangrizhanzhen.jpg" alt="img">
+									</div>
+									<div class="featured_category_info">
+										<h6 class="featured_category_heading"><a href="#">抗日战争</a></h6>
+										<p class="featured_category_number"><span>03</span>民族精神</p>
+									</div>
+								</div>
+								<div class="featured_category_item col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="600">
+									<div class="imgBox">
+										<img src="img/xzgcl.jpg" alt="img">
+									</div>
+									<div class="featured_category_info">
+										<h6 class="featured_category_heading"><a href="#">开国大典</a></h6>
+										<p class="featured_category_number"><span>04</span>建国精神</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="history">
+							<div class="row">
+								<div class="featured_category_item col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="600">
+									<div class="imgBox">
+										<img src="img/lunshidaguanxi.jpg" alt="img">
+									</div>
+									<div class="featured_category_info">
+										<h6 class="featured_category_heading"><a href="#">论十大关系</a></h6>
+										<p class="featured_category_number"><span>01</span>探索的开端</p>
+									</div>
+								</div>
+								<div class="featured_category_item col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="600">
+									<div class="imgBox">
+										<img src="img/dayuejing.jpg" alt="img">
+									</div>
+									<div class="featured_category_info">
+										<h6 class="featured_category_heading"><a href="#">大跃进运动</a></h6>
+										<p class="featured_category_number"><span>02</span>浮夸不科学</p>
+									</div>
+								</div>
+								<div class="featured_category_item col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="600">
+									<div class="imgBox">
+										<img src="img/renminggongshe.jpg" alt="img">
+									</div>
+									<div class="featured_category_info">
+										<h6 class="featured_category_heading"><a href="#">人民公社运动</a></h6>
+										<p class="featured_category_number"><span>03</span>过度强调公平</p>
+									</div>
+								</div>
+								<div class="featured_category_item col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="600">
+									<div class="imgBox">
+										<img src="img/wenhuadageming.jpg" alt="img">
+									</div>
+									<div class="featured_category_info">
+										<h6 class="featured_category_heading"><a href="#">文化大革命</a></h6>
+										<p class="featured_category_number"><span>04</span>十年内乱</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="history">
+							<div class="row">
+								<div class="featured_category_item col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="600">
+									<div class="imgBox">
+										<img src="img/yida.jpg" alt="img">
+									</div>
+									<div class="featured_category_info">
+										<h6 class="featured_category_heading"><a href="#">中共一大</a></h6>
+										<p class="featured_category_number"><span>01</span>建党精神</p>
+									</div>
+								</div>
+								<div class="featured_category_item col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="600">
+									<div class="imgBox">
+										<img src="img/wsyd.png" alt="img">
+									</div>
+									<div class="featured_category_info">
+										<h6 class="featured_category_heading"><a href="#">五四运动</a></h6>
+										<p class="featured_category_number"><span>02</span> 爱国精神</p>
+									</div>
+								</div>
+								<div class="featured_category_item col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="600">
+									<div class="imgBox">
+										<img src="img/xzgcl.jpg" alt="img">
+									</div>
+									<div class="featured_category_info">
+										<h6 class="featured_category_heading"><a href="#">开国大典</a></h6>
+										<p class="featured_category_number"><span>03</span>建国精神</p>
+									</div>
+								</div>
+								<div class="featured_category_item col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="600">
+									<div class="imgBox">
+										<img src="img/syjszqh.jpg" alt="img">
+									</div>
+									<div class="featured_category_info">
+										<h6 class="featured_category_heading"><a href="#">三中全会</a></h6>
+										<p class="featured_category_number"><span>04</span>建设精神</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-md-7">
+							<div class="blog_list" data-aos="fade-up" data-aos-duration="700">
+								<div class="history">
+									<article class="blog_post">
+										<div class="post_img" data-aos="overlay-left">
+											<a href="#"><img src="img/wsyd.png" alt="blog"></a>
+											<div class="calendar">
+												<a href="#"><span class="date">1919年5月4日</span></a>
+											</div>
+										</div>
+										<div class="post_content">
+											<div class="post_header">
+												<div class="author"><a href="#" style="">wǔ sì yùn dòng</a></div>
+												<h2 class="post_title">
+													<a href="#">五四运动</a>
+												</h2>
+											</div>
+											<div class="post_intro">
+												<p>
+													五四运动，是1919年5月4日发生在北京的一场以青年学生为主，广大群众、市民、工商人士等阶层共同参与的，通过示威游行、请愿、罢工、暴力对抗政府等多种形式进行的爱国运动，是中国人民彻底的反对帝国主义、封建主义的爱国运动，又称“五四风雷”。
+												</p>
+											</div>
+											<div class="post_footer">
+												<div class="read_more" data-aos="fade-up" data-aos-duration="700">
+													<a href="blog-details.html">友情链接</a>
+												</div>
+												<div class="post_share">
+													<ul class="share_list">
+														<li data-aos="fade-up" data-aos-duration="500"><a href="#"><i class="iconfont" style="color: blue;">&#xe606;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="500"><a href="#"><i class="iconfont" style="color: #7a7374;">&#xe719;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="900"><a href="#"><i class="iconfont" style="color: yellow;">&#xe601;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="1100"><a href="#"><i class="ion-social-instagram"></i></a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</article>
+									<article class="blog_post">
+										<div class="post_img" data-aos="overlay-left">
+											<a href="#"><img src="img/yida.jpg" alt="blog"></a>
+											<div class="calendar">
+												<a href="#"><span class="date">1919年5月4日</span></a>
+											</div>
+										</div>
+										<div class="post_content">
+											<div class="post_header">
+												<div class="author"><a href="#" style="">zhōng gòng yī dà</a></div>
+												<h2 class="post_title">
+													<a href="#">中共一大</a>
+												</h2>
+											</div>
+											<div class="post_intro">
+												<p>
+													中国共产党第一次全国代表大会于1921年7月23日至8月初在上海法租界望志路106号（现兴业路76号）和浙江嘉兴召开。上海的李达、李汉俊，北京的张国焘、刘仁静，武汉的董必武、陈潭秋，长沙的毛泽东、何叔衡，广州的陈公博，济南的王尽美、邓恩铭，旅日的周佛海，以及由陈独秀指定的代表包惠僧出席会议，代表全国50多名党员。
+													共产国际代表马林和尼克尔斯基也出席了大会。
+												</p>
+											</div>
+											<div class="post_footer">
+												<div class="read_more" data-aos="fade-up" data-aos-duration="700">
+													<a href="blog-details.html">友情链接</a>
+												</div>
+												<div class="post_share">
+													<ul class="share_list">
+														<li data-aos="fade-up" data-aos-duration="500"><a href="#"><i class="iconfont" style="color: blue;">&#xe606;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="500"><a href="#"><i class="iconfont" style="color: #7a7374;">&#xe719;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="900"><a href="#"><i class="iconfont" style="color: yellow;">&#xe601;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="1100"><a href="#"><i class="ion-social-instagram"></i></a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</article>
+									<article class="blog_post">
+										<div class="post_img" data-aos="overlay-left">
+											<a href="#"><img src="img/cd.jpg" alt="blog"></a>
+											<div class="calendar">
+												<a href="#"><span class="date">1934年10月</span></a>
+											</div>
+										</div>
+										<div class="post_content">
+											<div class="post_header">
+												<div class="author"><a href="#" style="">hóng jūn cháng zhēng</a></div>
+												<h2 class="post_title">
+													<a href="#">红军长征</a>
+												</h2>
+											</div>
+											<div class="post_intro">
+												<p>
+													1934年10月，第五次反“围剿”失败后，中央主力红军为摆脱国民党军队的包围追击，被迫实行战略性转移，退出中央根据地，进行长征。
+													长征是人类历史上的伟大奇迹，中央红军共进行了380余次战斗，攻占700多座县城，红军牺牲了营以上干部多达430余人，平均年龄不到30岁，共击溃国民党军数百个团，期间共经过14个省，翻越18座大山，跨过24条大河，走过荒草地，翻过雪山，行程约二万五千里，红一方面军于1935年10月到达陕北，与陕北红军胜利会师。1936年10月，红二、四方面军到达甘肃会宁地区，同红一方面军会师。
+													红军三大主力会师，标志着万里长征的胜利结束。
+												</p>
+											</div>
+											<div class="post_footer">
+												<div class="read_more" data-aos="fade-up" data-aos-duration="700">
+													<a href="blog-details.html">友情链接</a>
+												</div>
+												<div class="post_share">
+													<ul class="share_list">
+														<li data-aos="fade-up" data-aos-duration="500"><a href="#"><i class="iconfont" style="color: blue;">&#xe606;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="500"><a href="#"><i class="iconfont" style="color: #7a7374;">&#xe719;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="900"><a href="#"><i class="iconfont" style="color: yellow;">&#xe601;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="1100"><a href="#"><i class="ion-social-instagram"></i></a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</article>
+									<article class="blog_post">
+										<div class="post_img" data-aos="overlay-left">
+											<a href="#"><img src="img/kangrizhanzhen.jpg" alt="blog"></a>
+											<div class="calendar">
+												<a href="#"><span class="date">1931年9月18日</span></a>
+											</div>
+										</div>
+										<div class="post_content">
+											<div class="post_header">
+												<div class="author"><a href="#" style="">kàng rì zhàn zhēng</a></div>
+												<h2 class="post_title">
+													<a href="#">抗日战争</a>
+												</h2>
+											</div>
+											<div class="post_intro">
+												<p>
+													抗日战争（War of Resistance against Japan），简称抗战，指20世纪中期第二次世界大战中，中国抵抗日本侵略的一场民族性的全面战争。国际上称作第二次中日战争（Second Sino-Japanese War）、 日本侵华战争（Japanese War of Aggression against China）。抗战时间从1931年9月18日九一八事变开始算起，至1945年9月2日结束  ，共14年抗战。
+													1931年9月18日，日军进攻沈阳，九一八事变爆发，由于当局的不抵抗 [3-6]  ，致使日本侵略军迅速占领中国东北，并成立伪满洲国。1932年1月28日，日军进攻上海，淞沪抗战爆发，中日军队第一次全面对抗和较量 [9-11]  。1937年7月7日，日军在北平附近挑起卢沟桥事变，中日战争全面爆发。
+													1941年12月7日，日本发动太平洋战争后，12月9日，重庆国民政府正式对日宣战。
+													1945年8月15日，日本向同盟国无条件投降。
+												</p>
+											</div>
+											<div class="post_footer">
+												<div class="read_more" data-aos="fade-up" data-aos-duration="700">
+													<a href="blog-details.html">友情链接</a>
+												</div>
+												<div class="post_share">
+													<ul class="share_list">
+														<li data-aos="fade-up" data-aos-duration="500"><a href="#"><i class="iconfont" style="color: blue;">&#xe606;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="500"><a href="#"><i class="iconfont" style="color: #7a7374;">&#xe719;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="900"><a href="#"><i class="iconfont" style="color: yellow;">&#xe601;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="1100"><a href="#"><i class="ion-social-instagram"></i></a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</article>
+								</div>
+								<div class="history">
+									<article class="blog_post">
+										<div class="post_img" data-aos="overlay-left">
+											<a href="#"><img src="img/zhoyangbada.jpg" alt="中共一大"></a>
+											<div class="calendar">
+												<a href="#"><span class="date">1956年9月</span></a>
+											</div>
+										</div>
+										<div class="post_content">
+											<div class="post_header">
+												<div class="author"><a href="#" style="">zhōng gòng bā dà</a></div>
+												<h2 class="post_title">
+													<a href="#">中共八大</a>
+												</h2>
+											</div>
+											<div class="post_intro">
+												<p>
+													大会正式召开之前，党曾在多方面为大会的顺利召开做了准备。1956年4月25日，毛泽东在中央政治局扩大会议上作了《论十大关系》的讲话，为探索适合中国国情的社会主义建设道路提出了许多重要的思想原则，从思想上、理论上为八大的召开作了重要的准备。同年8月30日至9月12日，在北京举行了八大预备会议。毛泽东在会上作了《增强党的团结，继承党的传统》的讲话，指出八大召开的目的和宗旨是：总结七大以来的经验，团结全党，团结国内外一切可以团结的力量，为建设社会主义中国而奋斗。号召全党要继承优良传统，反对主观主义、宗派主义和官僚主义。
+												</p>
+											</div>
+											<div class="post_footer">
+												<div class="read_more" data-aos="fade-up" data-aos-duration="700">
+													<a href="blog-details.html">友情链接</a>
+												</div>
+												<div class="post_share">
+													<ul class="share_list">
+														<li data-aos="fade-up" data-aos-duration="500"><a href="#"><i class="iconfont" style="color: blue;">&#xe606;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="500"><a href="#"><i class="iconfont" style="color: #7a7374;">&#xe719;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="900"><a href="#"><i class="iconfont" style="color: yellow;">&#xe601;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="1100"><a href="#"><i class="ion-social-instagram"></i></a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</article>
+									<article class="blog_post">
+										<div class="post_img" data-aos="overlay-left">
+											<a href="#"><img src="img/dayuejing.jpg" alt="blog"></a>
+											<div class="calendar">
+												<a href="#"><span class="date">1958年到1960年</span></a>
+											</div>
+										</div>
+										<div class="post_content">
+											<div class="post_header">
+												<div class="author"><a href="#" style="">dà yuè jìn yùn dòng</a></div>
+												<h2 class="post_title">
+													<a href="#">大跃进运动</a>
+												</h2>
+											</div>
+											<div class="post_intro">
+												<p>
+													“大跃进”和人民公社化运动是我国探索建设社会主义道路中的一次严重失误。
+													它忽视了客观的经济发展规律，过分夸大了主观意志和主观努力的作用，使高指标、瞎指挥、浮夸风、“共产”风等错误大肆泛滥，工农业生产遭到极大破坏，国民经济比例严重失调，人民生活发生严重困难。
+												</p>
+											</div>
+											<div class="post_footer">
+												<div class="read_more" data-aos="fade-up" data-aos-duration="700">
+													<a href="blog-details.html">友情链接</a>
+												</div>
+												<div class="post_share">
+													<ul class="share_list">
+														<li data-aos="fade-up" data-aos-duration="500"><a href="#"><i class="iconfont" style="color: blue;">&#xe606;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="500"><a href="#"><i class="iconfont" style="color: #7a7374;">&#xe719;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="900"><a href="#"><i class="iconfont" style="color: yellow;">&#xe601;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="1100"><a href="#"><i class="ion-social-instagram"></i></a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</article>
+									<article class="blog_post">
+										<div class="post_img" data-aos="overlay-left">
+											<a href="#"><img src="img/gmjjtz.jpg" alt="blog"></a>
+											<div class="calendar">
+												<a href="#"><span class="date">1960年6月</span></a>
+											</div>
+										</div>
+										<div class="post_content">
+											<div class="post_header">
+												<div class="author"><a href="#" style="">guó mín jīng jì tiáo zhěng</a></div>
+												<h2 class="post_title">
+													<a href="#">国民经济调整</a>
+												</h2>
+											</div>
+											<div class="post_intro">
+												<p>
+													在中国共产党开始全面建设社会主义时期提出的恢复与发展国民经济的“调整、巩固、充实、提高”的“八字方针”的具体指导下，到1962年，经济逐步得到恢复和发展；1965年，国民经济调整任务基本完成；
+													1966年，全国基本完成了预定的国民经济调整任务，使中国的国民经济得到了恢复和发展。
+												</p>
+											</div>
+											<div class="post_footer">
+												<div class="read_more" data-aos="fade-up" data-aos-duration="700">
+													<a href="blog-details.html">友情链接</a>
+												</div>
+												<div class="post_share">
+													<ul class="share_list">
+														<li data-aos="fade-up" data-aos-duration="500"><a href="#"><i class="iconfont" style="color: blue;">&#xe606;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="500"><a href="#"><i class="iconfont" style="color: #7a7374;">&#xe719;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="900"><a href="#"><i class="iconfont" style="color: yellow;">&#xe601;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="1100"><a href="#"><i class="ion-social-instagram"></i></a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</article>
+									<article class="blog_post">
+										<div class="post_img" data-aos="overlay-left">
+											<a href="#"><img src="img/wenhuadageming.jpg" alt="blog"></a>
+											<div class="calendar">
+												<a href="#"><span class="date">1966年至1976年</span></a>
+											</div>
+										</div>
+										<div class="post_content">
+											<div class="post_header">
+												<div class="author"><a href="#" style="">wén huà dà gé mìng</a></div>
+												<h2 class="post_title">
+													<a href="#">文化大革命</a>
+												</h2>
+											</div>
+											<div class="post_intro">
+												<p>
+													“文化大革命”是由毛泽东同志发动和领导的。
+													他发动这场“大革命”的出发点是防止资本主义复辟、维护党的纯洁性和寻求中国自己的建设社会主义的道路。但他当时对党和国家的政治状况的错误估计，已经发展到非常严重的程度。他认为党中央出了修正主义，党和国家面临资本主义复辟的现实危险，只有采取断然措施，公开地、全面地、由下而上地发动广大群众，才能揭露党和国家生活中的阴暗面，把所谓被走资派篡夺了的权力夺回来。
+													这场“大革命”之所以冠以“文化”二字，是因为它是由文化领域的“批判”引发的。
+													
+												</p>
+											</div>
+											<div class="post_footer">
+												<div class="read_more" data-aos="fade-up" data-aos-duration="700">
+													<a href="blog-details.html">友情链接</a>
+												</div>
+												<div class="post_share">
+													<ul class="share_list">
+														<li data-aos="fade-up" data-aos-duration="500"><a href="#"><i class="iconfont" style="color: blue;">&#xe606;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="500"><a href="#"><i class="iconfont" style="color: #7a7374;">&#xe719;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="900"><a href="#"><i class="iconfont" style="color: yellow;">&#xe601;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="1100"><a href="#"><i class="ion-social-instagram"></i></a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</article>
+								</div>
+								<div class="history">
+									<article class="blog_post">
+										<div class="post_img" data-aos="overlay-left">
+											<a href="#"><img src="img/wsyd.png" alt="blog"></a>
+											<div class="calendar">
+												<a href="#"><span class="date">1919年5月4日</span></a>
+											</div>
+										</div>
+										<div class="post_content">
+											<div class="post_header">
+												<div class="author"><a href="#" style="">wǔ sì yùn dòng</a></div>
+												<h2 class="post_title">
+													<a href="#">五四运动</a>
+												</h2>
+											</div>
+											<div class="post_intro">
+												<p>
+													五四运动，是1919年5月4日发生在北京的一场以青年学生为主，广大群众、市民、工商人士等阶层共同参与的，通过示威游行、请愿、罢工、暴力对抗政府等多种形式进行的爱国运动，是中国人民彻底的反对帝国主义、封建主义的爱国运动，又称“五四风雷”。
+												</p>
+											</div>
+											<div class="post_footer">
+												<div class="read_more" data-aos="fade-up" data-aos-duration="700">
+													<a href="blog-details.html">友情链接</a>
+												</div>
+												<div class="post_share">
+													<ul class="share_list">
+														<li data-aos="fade-up" data-aos-duration="500"><a href="#"><i class="iconfont" style="color: blue;">&#xe606;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="500"><a href="#"><i class="iconfont" style="color: #7a7374;">&#xe719;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="900"><a href="#"><i class="iconfont" style="color: yellow;">&#xe601;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="1100"><a href="#"><i class="ion-social-instagram"></i></a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</article>
+									<article class="blog_post">
+										<div class="post_img" data-aos="overlay-left">
+											<a href="#"><img src="img/yida.jpg" alt="blog"></a>
+											<div class="calendar">
+												<a href="#"><span class="date">1919年5月4日</span></a>
+											</div>
+										</div>
+										<div class="post_content">
+											<div class="post_header">
+												<div class="author"><a href="#" style="">zhōng gòng yī dà</a></div>
+												<h2 class="post_title">
+													<a href="#">中共一大</a>
+												</h2>
+											</div>
+											<div class="post_intro">
+												<p>
+													中国共产党第一次全国代表大会于1921年7月23日至8月初在上海法租界望志路106号（现兴业路76号）和浙江嘉兴召开。上海的李达、李汉俊，北京的张国焘、刘仁静，武汉的董必武、陈潭秋，长沙的毛泽东、何叔衡，广州的陈公博，济南的王尽美、邓恩铭，旅日的周佛海，以及由陈独秀指定的代表包惠僧出席会议，代表全国50多名党员。
+													共产国际代表马林和尼克尔斯基也出席了大会。
+												</p>
+											</div>
+											<div class="post_footer">
+												<div class="read_more" data-aos="fade-up" data-aos-duration="700">
+													<a href="blog-details.html">友情链接</a>
+												</div>
+												<div class="post_share">
+													<ul class="share_list">
+														<li data-aos="fade-up" data-aos-duration="500"><a href="#"><i class="iconfont" style="color: blue;">&#xe606;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="500"><a href="#"><i class="iconfont" style="color: #7a7374;">&#xe719;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="900"><a href="#"><i class="iconfont" style="color: yellow;">&#xe601;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="1100"><a href="#"><i class="ion-social-instagram"></i></a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</article>
+									<article class="blog_post">
+										<div class="post_img" data-aos="overlay-left">
+											<a href="#"><img src="img/cd.jpg" alt="blog"></a>
+											<div class="calendar">
+												<a href="#"><span class="date">1934年10月</span></a>
+											</div>
+										</div>
+										<div class="post_content">
+											<div class="post_header">
+												<div class="author"><a href="#" style="">hóng jūn cháng zhēng</a></div>
+												<h2 class="post_title">
+													<a href="#">红军长征</a>
+												</h2>
+											</div>
+											<div class="post_intro">
+												<p>
+													1934年10月，第五次反“围剿”失败后，中央主力红军为摆脱国民党军队的包围追击，被迫实行战略性转移，退出中央根据地，进行长征。
+													长征是人类历史上的伟大奇迹，中央红军共进行了380余次战斗，攻占700多座县城，红军牺牲了营以上干部多达430余人，平均年龄不到30岁，共击溃国民党军数百个团，期间共经过14个省，翻越18座大山，跨过24条大河，走过荒草地，翻过雪山，行程约二万五千里，红一方面军于1935年10月到达陕北，与陕北红军胜利会师。1936年10月，红二、四方面军到达甘肃会宁地区，同红一方面军会师。
+													红军三大主力会师，标志着万里长征的胜利结束。
+												</p>
+											</div>
+											<div class="post_footer">
+												<div class="read_more" data-aos="fade-up" data-aos-duration="700">
+													<a href="blog-details.html">友情链接</a>
+												</div>
+												<div class="post_share">
+													<ul class="share_list">
+														<li data-aos="fade-up" data-aos-duration="500"><a href="#"><i class="iconfont" style="color: blue;">&#xe606;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="500"><a href="#"><i class="iconfont" style="color: #7a7374;">&#xe719;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="900"><a href="#"><i class="iconfont" style="color: yellow;">&#xe601;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="1100"><a href="#"><i class="ion-social-instagram"></i></a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</article>
+									<article class="blog_post">
+										<div class="post_img" data-aos="overlay-left">
+											<a href="#"><img src="img/kangrizhanzhen.jpg" alt="blog"></a>
+											<div class="calendar">
+												<a href="#"><span class="date">1931年9月18日</span></a>
+											</div>
+										</div>
+										<div class="post_content">
+											<div class="post_header">
+												<div class="author"><a href="#" style="">kàng rì zhàn zhēng</a></div>
+												<h2 class="post_title">
+													<a href="#">抗日战争</a>
+												</h2>
+											</div>
+											<div class="post_intro">
+												<p>
+													抗日战争（War of Resistance against Japan），简称抗战，指20世纪中期第二次世界大战中，中国抵抗日本侵略的一场民族性的全面战争。国际上称作第二次中日战争（Second Sino-Japanese War）、 日本侵华战争（Japanese War of Aggression against China）。抗战时间从1931年9月18日九一八事变开始算起，至1945年9月2日结束  ，共14年抗战。
+													1931年9月18日，日军进攻沈阳，九一八事变爆发，由于当局的不抵抗 [3-6]  ，致使日本侵略军迅速占领中国东北，并成立伪满洲国。1932年1月28日，日军进攻上海，淞沪抗战爆发，中日军队第一次全面对抗和较量 [9-11]  。1937年7月7日，日军在北平附近挑起卢沟桥事变，中日战争全面爆发。
+													1941年12月7日，日本发动太平洋战争后，12月9日，重庆国民政府正式对日宣战。
+													1945年8月15日，日本向同盟国无条件投降。
+												</p>
+											</div>
+											<div class="post_footer">
+												<div class="read_more" data-aos="fade-up" data-aos-duration="700">
+													<a href="blog-details.html">友情链接</a>
+												</div>
+												<div class="post_share">
+													<ul class="share_list">
+														<li data-aos="fade-up" data-aos-duration="500"><a href="#"><i class="iconfont" style="color: blue;">&#xe606;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="500"><a href="#"><i class="iconfont" style="color: #7a7374;">&#xe719;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="900"><a href="#"><i class="iconfont" style="color: yellow;">&#xe601;</i></a></li>
+														<li data-aos="fade-up" data-aos-duration="1100"><a href="#"><i class="ion-social-instagram"></i></a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</article>
+								</div>
+							</div>
+							<div class="pagination-div">
+								<ul class="pagination">
+									<li index='1'><a class="page-number current" href="javascript:;">1</a></li>
+									<li index='2'><a class="page-number" href="javascript:;">2</a></li>
+									<li index='3'><a class="page-number" href="javascript:;">3</a></li>
+								</ul>
+							</div>
+						</div>
+						
+						<div class="col-lg-4 col-md-5">
+							<div class="sidebar" data-aos="fade-up" data-aos-duration="900">
+								<div id="custom_1" class="widget widget_custom">
+									<h4 class="widget_title">中国共产党</h4>
+		                            <div class="sidebar_author">
+										<img src="img/jiandang.png" alt="img">									
+										<p class="intro">
+											中国共产党（英文名：the Communist Party of China，简写CPC），简称中共，创建于1921年7月23日 ，历经多年国共内战，率领中国人民解放军打败中华民国国军，并在1949年于北京建立中华人民共和国。
+											1949年10月至今为代表工人阶级领导工农联盟和统一战线，在中国大陆实行人民民主专政的中华人民共和国唯一执政党。
+										</p>
+		
+										<div class="social_profile">
+											<div class="social_media">
+												<a href="#">
+													<i class="iconfont" style="color: red; background-color: yellow;">&#xe600;</i>
+													<div class="name">党旗</div>
+													<div class="off_text">9191.4万名</div>
+												</a>
+											</div>
+		
+											<div class="social_media">
+												<a href="#">
+													<i class="iconfont" style="color: red; background-color: yellow;">&#xe6d8;</i>
+													<div class="name">国旗</div>
+													<div class="off_text">14亿5万人</div>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<div id="recent-posts-1" class="widget widget_recent_posts">
+									<h4 class="widget_title">党史概述</h4>
+									<div class="sidebar_recent_posts">
+										<ul>
+											<li index='1'><a class="active"href="javascript:;">新民主主义革命</a></li>
+											<li index='2'><a href="javascript:;">社会主义探索</a></li>
+											<li index='3'><a href="javascript:;">特色社会主义</a></li>
+										</ul>
+									</div>
+								</div>
+		
+								<div id="custom_2" class="widget widget_custom">
+									<div class="sidebar_add">
+										<div class="historys">
+											<div class="history">
+												<img src="img/xzgcl.jpg" alt="新中国成立">
+											</div>
+											<div class="history">
+												<img src="img/renminggongshe.jpg" alt="社会主义探索">
+											</div>
+											<div class="history">
+												<img src="img/xzgcl.jpg" alt="新中国成立">
+											</div>
+										</div>
+									</div>
+								</div>
+		
+								<div id="categories-1" class="widget widget_categories">
+		                            <h4 class="widget_title">主要事件</h4>
+		                            <div class="sidebar_categories">
+										<div class="historys">
+											<div class="history">
+												<ul class="category_list">
+												    <li><a href="#">新文化运动</a> (1)</li>
+												    <li><a href="#">五四运动</a> (2)</li>
+												    <li><a href="#">中共“一大”</a> (3)</li>
+												    <li><a href="#">红军长征</a> (4)</li>
+												    <li><a href="#">全面抗日战争</a> (5)</li>
+													<li><a href="#">新中国的成立</a>(6)</li>
+												</ul>
+											</div>
+											<div class="history">
+												<ul class="category_list">
+												    <li><a href="#">中共八大</a> (1)</li>
+												    <li><a href="#">大跃进运动</a> (2)</li>
+												    <li><a href="#">人民公社化运动</a> (3)</li>
+												    <li><a href="#">八字方针</a> (4)</li>
+												    <li><a href="#">文化大革命</a> (5)</li>
+												</ul>
+											</div>
+											<div class="history">
+												<ul class="category_list">
+												    <li><a href="#">新文化运动</a> (1)</li>
+												    <li><a href="#">五四运动</a> (2)</li>
+												    <li><a href="#">中共“一大”</a> (3)</li>
+												    <li><a href="#">红军长征</a> (4)</li>
+												    <li><a href="#">全面抗日战争</a> (5)</li>
+													<li><a href="#">新中国的成立</a>(6)</li>
+												</ul>
+											</div>
+										</div>
+		                            </div>
+								</div>
+								<div id="popular-1" class="widget widget_popular_posts">
+		                            <h4 class="widget_title">图片展示</h4>
+									<div class="historys">
+										<div class="history">
+											<div class="sidebar_popular_posts">
+											    <div class="popular_post_item">
+											        <div class="popular_post_item_wrapper">
+														<img src="img/xinwenhua.jpg" alt="img">
+														<div class="popular_post_item_content">
+											                <h4 class="popular_post_item_title">
+																<a href="#">新文化运动</a>
+															</h4>
+											            </div>
+											        </div>
+												</div>
+												<div class="popular_post_item">
+											        <div class="popular_post_item_wrapper">
+														<img src="img/wsyd.png" alt="img">
+														<div class="popular_post_item_content">
+											                <h4 class="popular_post_item_title">
+																<a href="#">五四运动</a>
+															</h4>
+											            </div>
+											        </div>
+												</div>
+												<div class="popular_post_item">
+											        <div class="popular_post_item_wrapper">
+														<img src="img/hongjunyuanzhen.jpg" alt="img">
+														<div class="popular_post_item_content">
+											                <h4 class="popular_post_item_title">
+																<a href="#">红军长征</a>
+															</h4>
+											            </div>
+											        </div>
+											    </div>
+											</div>
+										</div>
+										<div class="history">
+											<div class="sidebar_popular_posts">
+											    <div class="popular_post_item">
+											        <div class="popular_post_item_wrapper">
+														<img src="img/lunshidaguanxi.jpg" alt="img">
+														<div class="popular_post_item_content">
+											                <h4 class="popular_post_item_title">
+																<a href="#">论十大关系</a>
+															</h4>
+											            </div>
+											        </div>
+												</div>
+												<div class="popular_post_item">
+											        <div class="popular_post_item_wrapper">
+														<img src="img/dayuejing.jpg" alt="img">
+														<div class="popular_post_item_content">
+											                <h4 class="popular_post_item_title">
+																<a href="#">大跃进</a>
+															</h4>
+											            </div>
+											        </div>
+												</div>
+												<div class="popular_post_item">
+											        <div class="popular_post_item_wrapper">
+														<img src="img/zhoyangbada.jpg" alt="img">
+														<div class="popular_post_item_content">
+											                <h4 class="popular_post_item_title">
+																<a href="#">中共八大</a>
+															</h4>
+											            </div>
+											        </div>
+											    </div>
+											</div>
+										</div>
+										<div class="history">
+											<div class="sidebar_popular_posts">
+											    <div class="popular_post_item">
+											        <div class="popular_post_item_wrapper">
+														<img src="img/xinwenhua.jpg" alt="img">
+														<div class="popular_post_item_content">
+											                <h4 class="popular_post_item_title">
+																<a href="#">新文化运动</a>
+															</h4>
+											            </div>
+											        </div>
+												</div>
+												<div class="popular_post_item">
+											        <div class="popular_post_item_wrapper">
+														<img src="img/wsyd.png" alt="img">
+														<div class="popular_post_item_content">
+											                <h4 class="popular_post_item_title">
+																<a href="#">五四运动</a>
+															</h4>
+											            </div>
+											        </div>
+												</div>
+												<div class="popular_post_item">
+											        <div class="popular_post_item_wrapper">
+														<img src="img/hongjunyuanzhen.jpg" alt="img">
+														<div class="popular_post_item_content">
+											                <h4 class="popular_post_item_title">
+																<a href="#">红军长征</a>
+															</h4>
+											            </div>
+											        </div>
+											    </div>
+											</div>
+										</div>
+									</div>
+		                        </div>
+								<div id="tags-1" class="widget widget_tag_cloud">
+		                            <h4 class="widget_title">标签词</h4>
+									<div class="historys">
+										<div class="history">
+											<div class="tagcloud">
+											    <a href="#">爱国</a>
+												<a href="#">新文化</a>
+												<a href="#">救国</a>
+												<a href="#">建党</a>
+												<a href="#">建国</a>
+											</div>
+										</div>
+										<div class="history">
+											<div class="tagcloud">
+											    <a href="#">探索</a>
+												<a href="#">尝试</a>
+												<a href="#">发展</a>
+												<a href="#">曲折</a>
+												<a href="#">恢复</a>
+											</div>
+										</div>
+										<div class="history">
+											<div class="tagcloud">
+											    <a href="#">爱国</a>
+												<a href="#">新文化</a>
+												<a href="#">救国</a>
+												<a href="#">建党</a>
+												<a href="#">建国</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</main>
 		<!-- 网页底部区域 -->
@@ -86,5 +895,24 @@
 		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
 		<!-- 引入bootstrap.js -->
 		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/aos.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/custom.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function myClick(){
+				const index=$(this)[0].getAttribute('index')
+				$('nav ul>li[index] a').removeClass('active')
+				$('nav ul>li[index] a').eq(index-1).addClass('active')
+				$('.sidebar_recent_posts ul>li[index] a').removeClass('active')
+				$('.sidebar_recent_posts ul>li[index] a').eq(index-1).addClass('active')
+				$('.pagination-div ul>li[index] a').removeClass('current')
+				$('.pagination-div ul>li[index] a').eq(index-1).addClass('current')
+				$('.history').attr('class','history');
+				$('.history').addClass('history'+index);
+			}
+			$('nav ul>li[index]').click(myClick)
+			$('.sidebar_recent_posts ul>li[index]').click(myClick)
+			$('.pagination-div ul>li[index]').click(myClick)
+		</script>
 	</body>
 </html>

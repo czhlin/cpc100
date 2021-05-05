@@ -52,72 +52,113 @@
 		</nav>
 	</header>
 	<!-- 网页中心区域 -->
-	<main class="mymain">
-		<div class="glass" >
-			<!-- 视差滚动start -->
-			<section class="sight">
-				<img src="img/gq.jpg" id="bg" alt="">
-				<img src="img/moon.jpg" id="moon" alt="">
-				<img src="img/mountain.png" id="mountain" alt="">
-				<img src="img/road.png" id="road" alt="">
-				<img src="img/gq.jpg" id="bg1" alt="">
-				<h2 id="text"><span id="mtext">百年建党，青春献礼</span><span class="blink">|</span></h2>
-			</section>
-			<script type="text/javascript">
-				let bg=document.getElementById("bg");
-				let moon=document.getElementById("moon")
-				let mountain=document.getElementById("mountain")
-				let road=document.getElementById("road")
-				let text=document.getElementById("text")
-				window.addEventListener('scroll',function(){
-					var value=window.scrollY;
-					if(value>100){
-						value-=100
-						bg.style.top=value*0.5+'px';
-						moon.style.right=value*0.5+'px';
-						mountain.style.top=-value*0.15+'px';
-						road.style.top=value*0.15+'px';
-						text.style.top=100+value*1.5+'px'
-					}
-				})
-			</script>
-			<!-- 视差滚动end -->
-			<!--轮播图start-->
-			<div class="mslide">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="carousel slide" id="carousel-example-generic" data-ride="carousel" data-interval="1000">
-							<ol class="carousel-indicators">
-								<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-								<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-								<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-								<li data-target="#carousel-example-generic" data-slide-to="3"></li>
-								<li data-target="#carousel-example-generic" data-slide-to="4"></li>
-							</ol>
-							<div class="carousel-inner">
-								<div class="item active">
-									<img src="img/s1.jpg">
-								</div>
-								<div class="item">
-									<img src="img/s2.jpg">
-								</div>
-								<div class="item">
-									<img src="img/s3.jpg">
-								</div>
-								<div class="item">
-									<img src="img/s4.jpg">
-								</div>
-								<div class="item">
-									<img src="img/s5.jpg">
-								</div>
+	<main>
+		<!-- 视差滚动start -->
+		<section class="sight">
+			<img src="img/gq.jpg" id="bg" alt="">
+			<img src="img/moon.jpg" id="moon" alt="">
+			<img src="img/mountain.png" id="mountain" alt="">
+			<img src="img/road.png" id="road" alt="">
+			<img src="img/gq.jpg" id="bg1" alt="">
+			<h2 id="text"><span id="mtext">百年建党，青春献礼</span><span class="blink">|</span></h2>
+		</section>
+		<script type="text/javascript">
+			let bg=document.getElementById("bg");
+			let moon=document.getElementById("moon")
+			let mountain=document.getElementById("mountain")
+			let road=document.getElementById("road")
+			let text=document.getElementById("text")
+			window.addEventListener('scroll',function(){
+				var value=window.scrollY;
+				if(value>100){
+					value-=100
+					bg.style.top=value*0.5+'px';
+					moon.style.right=value*0.5+'px';
+					mountain.style.top=-value*0.15+'px';
+					road.style.top=value*0.15+'px';
+					text.style.top=100+value*1.5+'px'
+				}
+			})
+		</script>
+		<!-- 视差滚动end -->
+		<!-- 艺术轮播start -->
+		<div class="theme-slider container">
+			<div class="row">
+				<input type="radio" checked name="controls" id="rd1">
+				<input type="radio" name="controls" id="rd2">
+				<input type="radio" name="controls" id="rd3">
+				<div class="slider-img col-lg-6 col-md-6 col-sm-12">
+					<div class="slider-img-inner">
+						<div class="imgBox" index='1'><img src="img/m2.jpg" alt=""></div>
+						<div class="imgBox" index='2'><img src="img/m4.jpg" alt=""></div>
+						<div class="imgBox" index='3'><img src="img/m1.jpg" alt=""></div>
+					</div>
+				</div>
+				<div class="slider-text col-lg-6 col-md-6 col-sm-12">
+					<div class="slider-text-inner">
+						<div class="textBox" index='1'>
+							<h1><span id="title1"></span><span class="blink">|</span></h1>
+							<p>
+								<span id="text1"></span>
+								<span class="blink">|</span>
+							</p>
+						</div>
+						<div class="textBox" index='2'>
+							<h1><span id="title2"></span><span class="blink">|</span></h1>
+							<p>
+								<span id="text2"></span>
+								<span class="blink">|</span>
+							</p>
+						</div>
+						<div class="textBox" index='3'>
+							<h1><span id="title3"></span><span class="blink">|</span></h1>
+							<p>
+								<span id="text3"></span>
+								<span class="blink">|</span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="controls">
+					<label name="rd1" index='0'></label>
+					<label name="rd2" index='1'></label>
+					<label name="rd3" index='2'></label>
+				</div>             
+			</div>
+		</div>
+		<!-- 艺术轮播end -->
+		<!--轮播图start-->
+		<div class="mslide">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="carousel slide" id="carousel-example-generic" data-ride="carousel" data-interval="1000">
+						<ol class="carousel-indicators">
+							<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="4"></li>
+						</ol>
+						<div class="carousel-inner">
+							<div class="item active">
+								<img src="img/s1.jpg">
+							</div>
+							<div class="item">
+								<img src="img/s2.jpg">
+							</div>
+							<div class="item">
+								<img src="img/s3.jpg">
+							</div>
+							<div class="item">
+								<img src="img/s4.jpg">
+							</div>
+							<div class="item">
+								<img src="img/s5.jpg">
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!--轮播图end-->
-			<div class="circle1"></div>
-			<div class="circle2"></div>
 		</div>
 	</main>
 	<!-- 网页底部区域 -->
@@ -157,7 +198,58 @@
 		'党旗迎风空中飘，鲜花绽放吐芬芳',
 		'党的华诞到身旁，齐歌共舞不忘党'
 	]
+	var title1=[
+		'百年建党，青春献礼'
+	]
+	var text1=[
+		' 白鸽翱翔旗招展，赞歌飞扬舞翩跹，党的生日喜来临，神州处处笑开颜。万众一心跟党走，豪情满怀谱新篇，建党节时共祝愿，中国梦想早实现!',
+		'开心“党”不住，欢笑洒一路;幸福“党”不了，好运围你跑;财运“党”不完，存折数儿翻番。党的生日，祝福你万事如意，甜甜蜜蜜',
+		'日出东风世界亮，党的光辉恩泽长，和谐社会创繁荣，科学发展国力强，改革春风吹神州，人民一心拥护党，党的生日到，祝福我党再创辉煌'
+	]
+	var title2=[
+		'党旗迎风空中飘，鲜花绽放吐芬芳'
+	]
+	var text2=[
+		'一百年前，您的出现带来希望的曙光;一百年后，您让国家民族实现梦想;党旗为岁月增辉，红星为大地闪耀，建党一百华诞，江山分外妖娆。',
+		' 中国找道，千辛万难!中国问道，路在何方!中国正道，走向顶峰!中国难道，无依无靠!中国仁道，震惊世界!中国大道，百姓万福!中国知道，属于自己!',
+		'一湖春水半湖烟，船载星辉荡九天。东方鸡鸣天欲晓，风华赤子凯歌旋。天瑞雪压花枝开，万首清吟屏底栽。庆祝建党一百载，春风振振送馨来!'
+	]
+	var title3=[
+		'党的华诞到身旁，齐歌共舞不忘党'
+	]
+	var text3=[
+		'收集南北壮美风光，捧起东西流水温情，拥抱长城内外雄风，采集和谐幸福春光，高举旗帜随风飘扬，建党一百年之际，同欢情，共祝福：祖国未来无限辉煌!',
+		'为官一任，两袖清风，三个代表，造福四方黎民，惮心竭虑五更天，勿为私心徇六亲。常思七一，知八荣八耻，九州乾坤，情系百姓，运筹千里，和谐乐万家!',
+		' 诞生于南湖游船，犹如升起的朝阳。高擎镰刀斧头，率领中华儿女奋勇向前。亿万中国人民，演奏改革开放的交响，奋勇跨越新时代。党的生日，举国同庆!'
+	]
 	 typed($('#mtext'),texts);
+	 typed($('#title1'),title1);
+	 typed($('#title2'),title2);
+	 typed($('#title3'),title3);
+	 typed($('#text1'),text1,50);
+	 typed($('#text2'),text2,50);
+	 typed($('#text3'),text3,50);
+	 let index=1;
+	 let radio=$("input[type='radio']");
+	 let time=0;
+	 $('label').click(function(){
+		 radio.attr("checked",false);
+		 time=0;
+		 index=this.getAttribute('index')-0;
+		 radio.eq(index).attr("checked",true);
+	 });
+	 function start(){
+		return setInterval(()=>{
+			if(time===60){
+				radio.attr("checked",false);
+				radio.eq(index).attr("checked",true);
+				index=(index+1)%3;
+				time=0;
+			}
+			time++;
+		},100);
+	 }
+	 let timer=start();
 	</script>
 </body>
 </html>

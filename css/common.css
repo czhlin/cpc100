@@ -1,9 +1,9 @@
 /* 阿里巴巴图标 */
 @font-face {
   font-family: 'iconfont';  /* Project id 2521101 */
-  src: url('//at.alicdn.com/t/font_2521101_7cehfrx5nbs.woff2?t=1619847724390') format('woff2'),
-       url('//at.alicdn.com/t/font_2521101_7cehfrx5nbs.woff?t=1619847724390') format('woff'),
-       url('//at.alicdn.com/t/font_2521101_7cehfrx5nbs.ttf?t=1619847724390') format('truetype');
+  src: url('//at.alicdn.com/t/font_2521101_xyja3ndmzqc.woff2?t=1620198640574') format('woff2'),
+       url('//at.alicdn.com/t/font_2521101_xyja3ndmzqc.woff?t=1620198640574') format('woff'),
+       url('//at.alicdn.com/t/font_2521101_xyja3ndmzqc.ttf?t=1620198640574') format('truetype');
 }
 .iconfont{
     font-family:"iconfont" !important;
@@ -238,7 +238,7 @@ main {
 /* 打字动画 */
 @keyframes blink{
 	from{
-		color: #FFFFFF;
+		
 	}
 	to{
 		color: transparent;

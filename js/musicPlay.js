@@ -17,6 +17,7 @@ var range1=document.getElementById("rag");
 var range=document.getElementById("rag2");
 var myMusic=new Mymusic(audio,path,lyricPath);
 var myBar=document.querySelector('.mybar');
+var myBarProgress=document.querySelector('.progress-wrapper');
 var barflag=false;
 myMusic.doPlay=function(){
 	$("#record").addClass("record");
@@ -130,30 +131,46 @@ function openVideo(){
 myBar.onclick=function(event){
 	fl=true;
 	let x=event.clientX;
-	let ox=this.offsetLeft;
+	let ox=getElementPagePosition(this).x;
 	let val=(x-ox)/this.offsetWidth;
 	myMusic.audio.currentTime=myMusic.audio.duration*val;
 }
-// myBar.onmousemove=function(event){
-// 	if(barflag){
-// 		fl=false;
-// 		let x=event.clientX;
-// 		let ox=this.offsetLeft;
-// 		let val=(x-ox)/this.offsetWidth*100;
-// 		setBar(val);
-// 	}
-// }
-// myBar.onmousedown=function(event){
-// 	barflag=true;
-// }
-// myBar.onmouseup=function(event){
-// 	barflag=false;
-// 	console.log(barflag);
-// }
-// myBar.onmouseover=function(event){
-// 	barflag=false;
-// 	console.log(barflag);
-// }
+function getElementPagePosition(element){
+  //计算x坐标
+  var actualLeft = element.offsetLeft;
+  var current = element.offsetParent;
+  while (current !== null){
+    actualLeft += current.offsetLeft;
+    current = current.offsetParent;
+  }
+  //计算y坐标
+  var actualTop = element.offsetTop;
+  var current = element.offsetParent;
+  while (current !== null){
+    actualTop += (current.offsetTop+current.clientTop);
+    current = current.offsetParent;
+  }
+  //返回结果
+  return {x: actualLeft, y: actualTop}
+}
+myBar.onmousemove=function(event){
+	if(barflag){
+		fl=false;
+		let x=event.clientX;
+		let ox=getElementPagePosition(this).x;
+		let val=(x-ox)/this.offsetWidth*100;
+		setBar(val);
+	}
+}
+myBar.onmousedown=function(event){
+	barflag=true;
+}
+myBar.onmouseup=function(event){
+	barflag=false;
+}
+myBar.onmouseover=function(event){
+	barflag=false;
+}
 range1.oninput=function(event){
 	var val=event.target.value;
 	document.querySelector("#rag").style.cssText="background-size: "+val+"% 100%;";

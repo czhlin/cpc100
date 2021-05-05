@@ -5,7 +5,6 @@
 		var volumeBar=document.querySelector('.video-volume input.volume-range');
 		var PlayFlag=true;
 		var videoIndex=0;
-		var videoCount=2;
 		var flVideo=true;
 		var videolist=document.getElementById('videoList');
 		var videos=[
@@ -29,7 +28,8 @@
 				name:'抗战胜利是全体中华儿女的荣光',
 				src:'http://flv4mp4.people.com.cn/videofile6/pvmsvideo/2020/9/4/SongHeLi_9e780ed3976e97b749bdd4b87f8460ec_android_c.mp4'
 			}
-		]
+		];
+		var videoCount=videos.length;
 		for(var i=0;i<videos.length;i++){
 			videolist.options[i]=new Option(videos[i].name);
 			videolist.options[i].setAttribute('value',videos[i].name);
@@ -47,6 +47,9 @@
 		video.addEventListener("play",function(){
 			PlayFlag=true;
 			playIconfont.innerHTML='&#xe62a;'
+		},true);
+		video.addEventListener("ended",function(){
+			nextVideo();
 		},true);
 		video.addEventListener('volumechange', function(e) {
 			var val=video.volume*100;
