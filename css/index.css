@@ -196,6 +196,7 @@ input[type='radio'][id='rd3']:checked~.slider-text .textBox[index='3'] {
 .imgBox img {
 	width: 100%;
 	height: 100%;
+	object-fit: fill;
 }
 .slider-text .slider-text-inner {
 	width: 200%;

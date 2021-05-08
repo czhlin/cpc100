@@ -43,7 +43,8 @@ body {
 }
 .hide,
 .none {
-    display: none;
+   display: none;
+   /* visibility: hidden; */
 }
 /* 清除浮动 */
 .clearfix::after {

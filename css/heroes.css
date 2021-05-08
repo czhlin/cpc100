@@ -42,7 +42,7 @@
 	-webkit-box-shadow: 11px 14px 10px -6px rgba(0,0,0,0.75);
 	-moz-box-shadow: 11px 14px 10px -6px rgba(0,0,0,0.75);
 	z-index: 1;
-	transition: all 0.5s linear; 
+	transition: all 0.5s ease-in-out; 
 	overflow: hidden;
 }
 .card .imgBox {

@@ -114,11 +114,12 @@ img{
     color: #9a9a9a;
 }
 .bg_image_1{
-   /* background-image: url(../images/bg1.png);
+   background-image: url(../img/mm2.jpg);
+   background-attachment: fixed;
     background-position: center top;
     background-repeat: no-repeat;
-    background-size: cover; */
-	background: linear-gradient(90deg, #90F7EC,#32CCBC);
+    background-size: cover;
+	/* background: linear-gradient(90deg, #90F7EC,#32CCBC); */
 }
 .bg_image_2{
     background-image: url(../images/bg2.png);
@@ -605,6 +606,7 @@ img{
 	overflow: hidden;
 	display: flex;
 }
+
 .historys {
 	display: flex;
 	width: 100%;
@@ -618,7 +620,7 @@ img{
 	flex-shrink: 0;
 	border: 1px white solid;
 	/* transform: translate(-200%); */
-	transition: all 1s ease-in-out;
+	transition: all 2s ease-in-out;
 }
 .history1 {
 	transform: translate(0);
@@ -813,7 +815,7 @@ img{
 .pagination li a.page-number:hover,
 .pagination li a.page-number.current{
     background: #93a094;
-    color: #fff;
+    color: #fff!important;
     box-shadow: 0px 10px 15px rgba(89, 129, 91, 0.19);
 }
 
@@ -1624,7 +1626,14 @@ a:hover {
     font-weight: 500;
     font-style: italic;
 }
-
+.sidebar_add .history {
+	height: 200px;
+	overflow: hidden;
+}
+.sidebar_add img {
+	width: 100%;
+	height: 100%;
+}
 .widget_recent_posts ul li {
     display: flex; 
     position: relative;

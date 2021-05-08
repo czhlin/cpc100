@@ -94,6 +94,9 @@ label.logo {
 label.logo a {
 	color: white;
 }
+label.logo a:hover {
+	color: white!important;
+}
 nav ul {
 	float: right;
 	margin-right: 20px;
