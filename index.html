@@ -131,7 +131,7 @@
 		<div class="mslide">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="carousel slide" id="carousel-example-generic" data-ride="carousel" data-interval="1000">
+					<div class="carousel slide" id="carousel-example-generic" data-ride="carousel" data-interval="3000">
 						<ol class="carousel-indicators">
 							<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
 							<li data-target="#carousel-example-generic" data-slide-to="1"></li>
@@ -165,7 +165,7 @@
 	<footer class="footer">
 		<div class="outer">
 			<ul>
-				<li>Copyrights © 2021<i class="heart_icon"></i>亲爱的共产党</li>
+				<li>Copyrights © 2021<i class="heart_icon"></i>敬爱的中国共产党</li>
 				<li>
 					<span>
 						<spn>
@@ -226,9 +226,9 @@
 	 typed($('#title1'),title1);
 	 typed($('#title2'),title2);
 	 typed($('#title3'),title3);
-	 typed($('#text1'),text1,50);
-	 typed($('#text2'),text2,50);
-	 typed($('#text3'),text3,50);
+	 typed($('#text1'),text1,30);
+	 typed($('#text2'),text2,30);
+	 typed($('#text3'),text3,30);
 	 let index=1;
 	 let radio=$("input[type='radio']");
 	 let time=0;
@@ -240,7 +240,7 @@
 	 });
 	 function start(){
 		return setInterval(()=>{
-			if(time===60){
+			if(time===200){
 				radio.attr("checked",false);
 				radio.eq(index).attr("checked",true);
 				index=(index+1)%3;

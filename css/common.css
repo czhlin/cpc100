@@ -185,7 +185,7 @@ main {
 	width: 100%;
 }
 .outer {
-	width: 240px;
+	min-width: 300px;
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);

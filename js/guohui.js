@@ -33,8 +33,8 @@ Guohui.prototype.drawFu=function(ctx,ox,oy,x1,y1,x2,y2,counterclockwise){
 }
 Guohui.prototype.drawBg=function(ctx){
 	const n=this.n;
-	const x=this.x-160;
-	const y=this.y-160;
+	const x=this.x-this.n*16;
+	const y=this.y-this.n*16;
 	//画背景start
 	ctx.beginPath();
 	ctx.moveTo(x,y);
@@ -49,8 +49,8 @@ Guohui.prototype.drawBg=function(ctx){
 }
 Guohui.prototype.drawHammer=function(ctx){
 	const n=this.n;
-	const x=this.x-160;
-	const y=this.y-160;
+	const x=this.x-this.n*16;
+	const y=this.y-this.n*16;
 	const drawFu=this.drawFu;
 	// 画锤子start
 	ctx.beginPath();
@@ -71,8 +71,8 @@ Guohui.prototype.drawHammer=function(ctx){
 }
 Guohui.prototype.drawSickle=function(ctx){
 	const n=this.n;
-	const x=this.x-160;
-	const y=this.y-160;
+	const x=this.x-this.n*16;
+	const y=this.y-this.n*16;
 	const drawFu=this.drawFu;
 	function drawRact(ctx){
 		//刀把矩形部分start
@@ -133,8 +133,8 @@ Guohui.prototype.draw=function(ctx){
 //动态画国徽
 Guohui.prototype.dynDraw=function(ctx){
 	const n=this.n;
-	const x=this.x-160;
-	const y=this.y-160;
+	const x=this.x-this.n*16;
+	const y=this.y-this.n*16;
 	const drawFu=this.drawFu;
 	if(this.isDraw){
 		return;

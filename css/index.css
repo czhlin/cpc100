@@ -75,7 +75,7 @@
 	z-index: 1;
 }
 
-@media (max-width: 1314px) {
+@media (max-width: 1200px) {
 	#text {
 		font-size: 3em;
 	}

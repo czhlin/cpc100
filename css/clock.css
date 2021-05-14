@@ -1,0 +1,162 @@
+
+  .clock {
+	display: flex;
+	height: 200px;
+	background:linear-gradient(to right top, #FFD3A5,#FD6585);
+	margin: 20px;
+	border-radius: 10px;
+	box-shadow:  10px 10px 20px #8e394a,
+	             -10px -10px 20px #ff91c0;
+	justify-content: center;
+	vertical-align: middle;
+	font-family: kaiti;
+  }
+  .clock .flip {
+	  display: inline-block;
+	  top: 50%;
+	  transform: translateY(-50%);
+  }
+  /* 时钟的分隔 */
+  .clock .divider {
+    font-size: 66px;
+    font-style: normal;
+    color: rgb(51, 50, 50);
+	line-height: 200px;
+	 text-shadow: 0px 3px 1px rgba(255,255,255,0.6);
+  }
+
+  /* 时钟的卡片 */
+  .clock .flip {
+    position: relative;
+    width: 60px;
+    height: 100px;
+    margin: 2px;
+    font-size: 70px;
+    font-weight: 700;
+    /* line-height: 100px; */
+    text-align: center;
+    background: rgb(46, 45, 45);
+    border: 1px solid rgb(34, 33, 33);
+    border-radius: 10px;
+   box-shadow:  5px 5px 10px #312e2e,
+                -5px -5px 10px #c3b8ba;
+	margin: 0 5px;
+  }
+
+  /* 时钟上的数字 */
+  .clock .flip .digital::before, .clock .flip .digital::after {
+    position: absolute;
+    content: attr(data-number);
+    left: 0;
+    right: 0;
+    color: white;
+    background: rgb(51, 50, 50);
+    overflow: hidden;
+    -webkit-perspective: 160px;
+            perspective: 160px;
+  }
+
+  /* 翻页前的数字 */
+ .clock .flip .digital::before {
+    top: 0;
+    bottom: 50%;
+    border-bottom: 1px solid #666;
+    border-radius: 10px 10px 0 0;
+  }
+
+  /* 翻页后的数字 */
+  .clock .flip .digital::after {
+    top: 50%;
+    bottom: 0;
+    line-height: 0;
+	/* z-index: 100; */
+    border-radius: 0 0 10px 10px;
+  }
+
+  .clock .flip .back::before,
+  .clock .flip .front::after {
+    z-index: 1;
+  }
+  .clock .flip .back::after {
+    z-index: 2;
+  }
+  .clock .flip .front::before {
+    z-index: 3;
+  }
+
+  .clock .flip .back::after {
+    -webkit-transform-origin: center top;
+            transform-origin: center top;
+    -webkit-transform: rotateX(0.5turn);
+            transform: rotateX(0.5turn);
+  }
+
+  .clock .flip.running .front::before {
+    -webkit-transform-origin: center bottom;
+            transform-origin: center bottom;
+    -webkit-animation: frontFlipDown 0.6s ease-in-out;
+            animation: frontFlipDown 0.6s ease-in-out;
+    box-shadow: 0 -2px 6px rgba(255, 255, 255, 0.3);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+
+  .clock .flip.running .back::after {
+    -webkit-animation: backFlipDown 0.6s ease-in-out;
+            animation: backFlipDown 0.6s ease-in-out;
+  }
+  
+  @-webkit-keyframes frontFlipDown {
+    to {
+      -webkit-transform: rotateX(0.5turn);
+              transform: rotateX(0.5turn);
+    }
+  }
+  
+  @keyframes frontFlipDown {
+    to {
+      -webkit-transform: rotateX(0.5turn);
+              transform: rotateX(0.5turn);
+    }
+  }
+
+  @-webkit-keyframes backFlipDown {
+    to {
+      -webkit-transform: rotateX(0);
+              transform: rotateX(0);
+    }
+  }
+  
+  @keyframes backFlipDown {
+    to {
+      -webkit-transform: rotateX(0);
+              transform: rotateX(0);
+    }
+  }
+  @media (max-width: 1430px) {
+  	.clock .divider {
+		font-size: 18px;
+	}
+  }
+   @media (max-width: 938px){
+	 .clock .divider {
+	   	font-size: 12px;
+	  }
+   }
+   @media (max-width: 825px){
+   	 .clock .divider {
+   	   	font-size: 10px;
+   	  }
+   }
+   @media (max-width: 778px){
+   	 .clock .flip {
+   	   	font-size: 30px;
+		width: 20px;
+		height: 50px;
+   	  }
+   }
+   @media (max-width: 500px){
+   	 .clock .divider {
+   	   	font-size: 5px;
+   	  }
+   }
