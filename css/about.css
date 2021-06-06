@@ -9,6 +9,7 @@
 .card {
 	max-width: 570px;
 	background: #fff;
+	height: 350px;
 	margin: 50px auto 100px;
 	transform-style: preserve-3d;
 	transform: perspective(2000px);

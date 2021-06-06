@@ -1,19 +1,26 @@
 
   .clock {
-	display: flex;
 	height: 200px;
 	background:linear-gradient(to right top, #FFD3A5,#FD6585);
 	margin: 20px;
 	border-radius: 10px;
 	box-shadow:  10px 10px 20px #8e394a,
 	             -10px -10px 20px #ff91c0;
-	justify-content: center;
-	vertical-align: middle;
 	font-family: kaiti;
+  }
+  .clock .title {
+	  font-size: 50px;
+	  line-height: 80px;
+	  height: 40%;
+  }
+  .clock .time {
+	  display: flex;
+	  height: 60%;
+	  justify-content: center;
   }
   .clock .flip {
 	  display: inline-block;
-	  top: 50%;
+	 top: 50%;
 	  transform: translateY(-50%);
   }
   /* 时钟的分隔 */
@@ -21,7 +28,7 @@
     font-size: 66px;
     font-style: normal;
     color: rgb(51, 50, 50);
-	line-height: 200px;
+	line-height: 120px;
 	 text-shadow: 0px 3px 1px rgba(255,255,255,0.6);
   }
 
@@ -133,30 +140,36 @@
               transform: rotateX(0);
     }
   }
-  @media (max-width: 1430px) {
+  /* @media (max-width: 1430px) {
   	.clock .divider {
 		font-size: 18px;
 	}
-  }
+  } */
    @media (max-width: 938px){
 	 .clock .divider {
-	   	font-size: 12px;
+	   	font-size: 40px;
 	  }
    }
    @media (max-width: 825px){
    	 .clock .divider {
-   	   	font-size: 10px;
-   	  }
-   }
-   @media (max-width: 778px){
-   	 .clock .flip {
    	   	font-size: 30px;
-		width: 20px;
-		height: 50px;
    	  }
+	  .clock .flip {
+		font-size: 40px;
+		width: 50px;
+		height: 60px;
+	  }
    }
    @media (max-width: 500px){
    	 .clock .divider {
-   	   	font-size: 5px;
+   	   	font-size: 20px;
    	  }
+	  .clock .title{
+		  font-size: 40px;
+	  }
+	  .clock .flip {
+	    	font-size: 30px;
+	  		width: 20px;
+	  		height: 50px;
+	   }
    }

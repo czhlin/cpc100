@@ -62,7 +62,7 @@ var flips = document.querySelectorAll(".flip");
 var now = new Date();
 var endTime=new Date("2021/07/01 00:00:00");
 var subTime=parseInt((endTime-now)/1000);
-var text=document.querySelector('.clock .divider')
+var text=document.querySelector('.clock .title')
 var nowTimeStr;
 var nextTimeStr;
 nowTimeStr = getTimeFromDate(subTime);
@@ -71,13 +71,22 @@ var flippers = Array.from(flips).map(function(flip, i) {return new Flipper(flip,
 setInterval(function() {
    var now =new Date();
    var subTime=parseInt((endTime-now)/1000);
-   if(subTime<0){
-	   text.innerHTML="离建党一百年:"
-   }
    var nowTimeStr;
    var nextTimeStr;
    nowTimeStr = getTimeFromDate(subTime);
    nextTimeStr = getTimeFromDate(subTime-1);
+   if(subTime<=0){
+   	   text.innerHTML="离建党一百年过去了:"
+	   if(subTime===0){
+		   console.log(111);
+		    return;
+	   }
+   }
+   console.log(subTime);
+ //   if(subTime>0&&subTime<=1){
+	// 	nowTimeStr = getTimeFromDate(subTime);
+	// 	nextTimeStr = getTimeFromDate(subTime+1);
+	// }
     for(var i=0; i < flippers.length; i++) {
         if(nowTimeStr[i] === nextTimeStr[i]) {
             continue;
